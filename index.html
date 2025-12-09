@@ -3,155 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BMW, Mini, Audi & VW Specialist Pretoria | Celtic Tuning | RMI Approved">
-    <title>Paul's Mini Workshop | German Car Specialist Pretoria</title>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;800&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <meta name="description" content="BMW, Mini, Audi & VW Specialist Pretoria | Celtic Tuning Accredited | Stage 1-3 Remaps | DPF/EGR Delete">
+    <title>Paul's Mini Workshop | Celtic Tuning Pretoria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Exo+2:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         :root {
-            --navy: #0f172a;
-            --blue: #1e40af;
-            --light-blue: #3b82f6;
-            --accent: #f59e0b;
-            --gray: #1e293b;
+            --bg: #0b1120;
+            --panel: #141a2b;
+            --accent: #00d4ff;
+            --highlight: #00ff9d;
+            --text: #e0e0e0;
+            --carbon: #111827;
         }
         * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: 'Exo 2', sans-serif; color: #f8fafc; background: var(--navy); }
+        body { font-family: 'Exo 2', sans-serif; background: var(--bg); color: var(--text); 
+               background-image: radial-gradient(circle at top left, #0f1a3b 0%, var(--bg) 70%); }
 
         /* HERO */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(rgba(15,23,42,0.88), rgba(15,23,42,0.92)),
-                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90') center/cover no-repeat fixed;
+            background: linear-gradient(rgba(11,17,32,0.92), rgba(11,17,32,0.96)),
+                        url('https://images.unsplash.com/photo-1581092160607-9c3d5b1d8d68?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90') center/cover fixed;
             display: flex; align-items: center; text-align: center;
         }
-        .hero h1 { font-family: 'Orbitron', sans-serif; font-size: 5.5rem; color: var(--light-blue); text-shadow: 0 0 30px rgba(59,130,246,0.6); }
-        .btn { display: inline-block; padding: 16px 40px; margin: 10px; border-radius: 50px; font-weight: bold; text-decoration: none; font-size: 1.2rem; transition: 0.3s; }
-        .btn-whatsapp { background: #25D366; } .btn-whatsapp:hover { background: #1da851; transform: scale(1.08); }
-        .btn-call { background: var(--light-blue); } .btn-call:hover { background: #2563eb; transform: scale(1.08); }
+        .hero h1 { font-family: 'Orbitron', sans-serif; font-size: 6rem; color: var(--accent); text-shadow: 0 0 40px rgba(0,212,255,0.6); }
+        .btn { display: inline-block; padding: 18px 44px; margin: 12px; border-radius: 8px; font-weight: bold; font-size: 1.3rem; transition: 0.3s; }
+        .btn-wa { background: #25D366; } .btn-wa:hover { background: #1da851; transform: translateY(-4px); }
+        .btn-call { background: var(--accent); color: black; } .btn-call:hover { background: var(--highlight); }
 
-        /* Navbar */
-        nav { position: fixed; top: 0; width: 100%; background: rgba(15,23,42,0.97); z-index: 1000; backdrop-filter: blur(10px); }
-        .nav-container { max-width: 1300px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Orbitron'; font-size: 1.9rem; color: var(--light-blue); }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(11,17,32,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,212,255,0.2); z-index: 1000; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Orbitron'; font-size: 2rem; color: var(--accent); }
 
-        section { padding: 100px 20px; max-width: 1300px; margin: 0 auto; }
-        .section-title { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; text-align: center; color: var(--light-blue); margin-bottom: 3rem; }
+        section { padding: 120px 20px; max-width: 1400px; margin: 0 auto; }
+        .section-title { font-family: 'Orbitron', sans-serif; font-size: 4rem; text-align: center; color: var(--accent); margin-bottom: 4rem; text-shadow: 0 0 20px rgba(0,212,255,0.4); }
 
-        /* Services */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
-        .card { background: rgba(30,41,59,0.9); border-radius: 16px; overflow: hidden; transition: 0.4s; border: 1px solid var(--blue); height: 420px; }
-        .card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(59,130,246,0.3); }
-        .card-img { height: 220px; background-size: cover; background-position: center; }
-        .card-content { padding: 1.8rem; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 2rem; }
+        .card { background: var(--panel); border: 1px solid rgba(0,212,255,0.2); border-radius: 16px; overflow: hidden; transition: 0.4s; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+        .card:hover { transform: translateY(-15px); border-color: var(--accent); }
+        .card-img { height: 240px; background-size: cover; background-position: center; }
+        .card-content { padding: 2rem; text-align: center; background: linear-gradient(to top, var(--carbon), var(--panel)); }
+        .card h3 { color: var(--highlight); font-size: 1.6rem; }
 
-        /* GALLERY */
-        #gallery { background: var(--gray); }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.8rem;
-        }
-        .gallery-item {
-            position: relative;
-            height: 260px;
-            background-size: cover;
-            background-position: center;
+        /* PERFORMANCE TUNING SECTION */
+        #tuning { background: var(--carbon); }
+        .tuning-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
+        .tune-card {
+            background: var(--panel);
+            border: 2px solid var(--highlight);
             border-radius: 16px;
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: all 0.4s;
-        }
-        .gallery-item:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(59,130,246,0.4); }
-        .gallery-item::after {
-            content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-            height: 100px; background: linear-gradient(transparent, rgba(0,0,0,0.8));
-        }
-        .gallery-caption {
-            position: absolute; bottom: 15px; left: 15px; right: 15px;
-            color: white; font-weight: 600; font-size: 1.1rem; text-shadow: 0 2px 10px black;
-        }
-
-        /* LIGHTBOX WITH SWIPE */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0; top: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.98);
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            overflow: hidden;
-            touch-action: pan-y;
-        }
-        .lightbox.active { display: flex; }
-        .lightbox img {
-            max-width: 95%;
-            max-height: 95vh;
-            border-radius: 12px;
-            box-shadow: 0 0 60px rgba(59,130,246,0.5);
-            user-select: none;
-            pointer-events: none;
-        }
-        .lightbox-caption {
-            position: absolute;
-            bottom: 40px;
-            color: white;
-            font-size: 1.5rem;
+            padding: 2rem;
             text-align: center;
-            width: 100%;
-            text-shadow: 0 2px 15px black;
+            transition: 0.4s;
         }
-        .close-lightbox {
-            position: absolute;
-            top: 30px; right: 40px;
-            font-size: 3.5rem;
-            color: white;
-            cursor: pointer;
-        }
-        .nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 5rem;
-            color: rgba(255,255,255,0.6);
-            cursor: pointer;
-            user-select: none;
-            padding: 20px;
-            transition: 0.3s;
-        }
-        .nav-arrow:hover { color: white; }
-        .prev { left: 20px; }
-        .next { right: 20px; }
+        .tune-card:hover { background: rgba(0,255,157,0.08); }
+        .tune-card h3 { color: var(--highlight); font-size: 1.8rem; }
+        .power { font-size: 2.2rem; color: var(--accent); font-weight: 800; }
+        .torque { color: var(--highlight); }
 
-        /* Floating WhatsApp */
-        .wa-float a {
-            position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white;
-            width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center;
-            justify-content: center; font-size: 2.4rem; box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-            z-index: 998; animation: pulse 2s infinite;
+        /* Popular Models Table */
+        table {
+            width: 100%; border-collapse: collapse; margin: 3rem 0; background: var(--panel); border-radius: 12px; overflow: hidden;
         }
-        @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)} 70%{box-shadow:0 0 0 16px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)} }
+        th { background: var(--highlight); color: black; padding: 1rem; }
+        td { padding: 1rem; text-align: center; border-bottom: 1px solid rgba(0,212,255,0.1); }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 3.4rem; }
-            .gallery-item { height: 200px; }
-            .nav-arrow { font-size: 4rem; }
-        }
+        /* Gallery & Lightbox (same as before) */
+        #gallery { background: var(--carbon); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.8rem; }
+        .gallery-item { position: relative; height: 280px; background-size: cover; border-radius: 16px; cursor: pointer; transition: 0.4s; box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
+        .gallery-item:hover { transform: scale(1.04); border: 2px solid var(--accent); }
+        .gallery-item::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 60%, rgba(11,17,32,0.9)); }
+        .gallery-caption { position: absolute; bottom: 20px; left: 20px; right: 20px; color: white; font-weight: bold; }
+
+        .lightbox { display: none; position: fixed; z-index: 9999; inset: 0; background: #000; align-items: center; justify-content: center; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 94%; max-height: 94vh; border-radius: 12px; }
+        .close-lightbox { position: absolute; top: 30px; right: 40px; font-size: 4rem; color: white; cursor: pointer; }
+        .nav-arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 5rem; color: rgba(0,212,255,0.7); cursor: pointer; }
+        .prev { left: 30px; } .next { right: 30px; }
+
+        .wa-float a { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.6rem; box-shadow: 0 8px 30px rgba(0,0,0,0.6); z-index: 998; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); } 70% { box-shadow: 0 0 0 20px transparent; } }
     </style>
 </head>
 <body>
 
-    <!-- HERO + NAV -->
+    <!-- HERO -->
     <section class="hero">
-        <div style="max-width:1000px; margin:0 auto; padding:2rem;">
+        <div style="z-index:2; max-width:1000px; margin:0 auto;">
             <h1>PAUL'S MINI WORKSHOP</h1>
-            <p style="font-size:1.6rem;">BMW • MINI • AUDI • VW SPECIALIST</p>
-            <p style="font-size:1.4rem; margin:2rem 0;">Celtic Tuning Accredited • RMI & MIWA Approved • Since 2011</p>
+            <p>GERMAN CAR SPECIALIST • PRETORIA</p>
+            <p style="font-size:1.4rem; margin:2rem 0;">Official Celtic Tuning Dealer • RMI • MIWA • Since 2011</p>
             <div>
-                <a href="https://wa.me/27827518458" class="btn btn-whatsapp">WhatsApp Now</a>
+                <a href="https://wa.me/27827518458" class="btn btn-wa">WhatsApp Quote</a>
                 <a href="tel:0127518458" class="btn btn-call">Call 012 751 8458</a>
             </div>
         </div>
@@ -160,129 +106,112 @@
     <nav>
         <div class="nav-container">
             <div class="logo">Paul's Mini Workshop</div>
-            <span style="font-size:2rem; cursor:pointer; color:white;" onclick="document.getElementById('navMenu').classList.toggle('active')">Menu</span>
-            <ul class="nav-menu" id="navMenu" style="display:flex; gap:2rem; list-style:none;">
-                <li><a href="#" style="color:white; text-decoration:none;">Home</a></li>
-                <li><a href="#services" style="color:white; text-decoration:none;">Services</a></li>
-                <li><a href="#gallery" style="color:white; text-decoration:none;">Gallery</a></li>
-                <li><a href="#contact" style="color:white; text-decoration:none;">Contact</a></li>
-            </ul>
+            <div style="display:flex; gap:2rem;">
+                <a href="#">Home</a><a href="#services">Services</a><a href="#tuning">Tuning</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+            </div>
         </div>
     </nav>
 
     <!-- SERVICES -->
     <section id="services">
-        <h2 class="section-title">Our Specialist Services</h2>
+        <h2 class="section-title">SERVICES</h2>
         <div class="grid">
-            <div class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1581092588576-2b1c05f2e3c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90')"></div><div class="card-content"><h3>Major & Minor Services</h3><p>Genuine parts & dealer-level diagnostics</p></div></div>
-            <div class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1626663999135-57e21e7b1b53?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90')"></div><div class="card-content"><h3>Celtic Chip Tuning</h3><p>Stage 1–3 • DPF/EGR/AdBlue</p></div></div>
-            <div class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1618843479313-40f8e899fcce?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90')"></div><div class="card-content"><h3>Diagnostics</h3><p>ISTA • ODIS • VCDS</p></div></div>
+            <div class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1581092160607-9c3d5b1d8d68?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90')"></div><div class="card-content"><h3>MAJOR & MINOR SERVICES</h3><p>All German vehicles</p></div></div>
+            <div class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1626663999135-57e21e7b1b53?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90')"></div><div class="card-content"><h3>CELTIC CHIP TUNING</h3><p>Stage 1–3 Remaps</p></div></div>
+            <div class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1618843479313-40f8e899fcce?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90')"></div><div class="card-content"><h3>DIAGNOSTICS</h3><p>ISTA • ODIS • VCDS</p></div></div>
         </div>
     </section>
 
-    <!-- GALLERY WITH SWIPE LIGHTBOX -->
+    <!-- PERFORMANCE TUNING SECTION -->
+    <section id="tuning">
+        <h2 class="section-title">CELTIC PERFORMANCE TUNING</h2>
+        <p style="text-align:center; font-size:1.3rem; max-width:900px; margin:0 auto 4rem;">
+            Official Celtic Tuning dealer in Pretoria • Proven safe gains • 12-month engine warranty • Dyno verified
+        </p>
+
+        <div class="tuning-grid">
+            <div class="tune-card">
+                <h3>BMW M340i 3.0T</h3>
+                <p class="power">+110 kW | +180 Nm</p>
+                <p>Stage 1: 368 → <strong>478 kW</strong></p>
+            </div>
+            <div class="tune-card">
+                <h3>VW Golf 8 R</h3>
+                <p class="power">+90 kW | +140 Nm</p>
+                <p>Stage 1: 235 → <strong>325 kW</strong></p>
+            </div>
+            <div class="tune-card">
+                <h3>Audi RS3 8Y</h3>
+                <p class="power">+135 kW | +200 Nm</p>
+                <p>Stage 2: 294 → <strong>429 kW</strong></p>
+            </div>
+            <div class="tune-card">
+                <h3>Mini JCW GP</h3>
+                <p class="power">+85 kW | +150 Nm</p>
+                <p>Stage 2: 225 → <strong>310 kW</strong></p>
+            </div>
+        </div>
+
+        <h3 style="text-align:center; margin:4rem 0 2rem; color:var(--highlight);">POPULAR TUNING OPTIONS</h3>
+        <table>
+            <tr><th>Vehicle</th><th>Stage 1</th><th>Stage 2</th><th>Stage 3</th></tr>
+            <tr><td>BMW F30 320d</td><td>+45 kW</td><td>+65 kW</td><td>+85 kW</td></tr>
+            <tr><td>Golf 7/8 GTI</td><td>+80 kW</td><td>+110 kW</td><td>+140 kW</td></tr>
+            <tr><td>Audi S3 8V/8Y</td><td>+100 kW</td><td>+130 kW</td><td>+170 kW</td></tr>
+            <tr><td>AMG A45</td><td>+120 kW</td><td>+160 kW</td><td>500+ kW</td></tr>
+        </table>
+
+        <div style="text-align:center; margin:3rem 0;">
+            <p style="font-size:1.4rem; margin-bottom:1rem;"><strong>Also Available:</strong> DPF Delete • EGR Delete • AdBlue/SCR Off • Pop & Bang • Speed Limiter Removal</p>
+            <a href="https://wa.me/27827518458?text=Hi%2C%20I%20want%20a%20quote%20for%20Stage%20X%20tuning" class="btn btn-wa" style="font-size:1.5rem; padding:20px 50px;">Get Your Custom Quote on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
     <section id="gallery">
-        <h2 class="section-title">Our Latest Work</h2>
-        <p style="text-align:center; max-width:800px; margin:0 auto 3rem;">Click or tap any photo – swipe to navigate</p>
+        <h2 class="section-title">OUR WORK</h2>
         <div class="gallery-grid">
-            <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90')" onclick="openLightbox(0)"><div class="gallery-caption">Mini Cooper GP – Stage 2</div></div>
-            <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90')" onclick="openLightbox(1)"><div class="gallery-caption">BMW M4 Comp – DPF Delete</div></div>
-            <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1592194996308-7b43878e84b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90')" onclick="openLightbox(2)"><div class="gallery-caption">Audi RS3 8V – Stage 3+</div></div>
-            <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1544636331-9114363d6354?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90')" onclick="openLightbox(3)"><div class="gallery-caption">Golf 8 R – Dyno Tune</div></div>
-            <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1558642084-f3082c2a9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90')" onclick="openLightbox(4)"><div class="gallery-caption">M340i xDrive – Stage 2</div></div>
-            <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90')" onclick="openLightbox(5)"><div class="gallery-caption">Classic Mini Restoration</div></div>
+            <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90')" onclick="openLightbox(0)"><div class="gallery-caption">Mini GP – Stage 2</div></div>
+            <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90')" onclick="openLightbox(1)"><div class="gallery-caption">M4 Comp – DPF Off</div></div>
+            <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1592194996308-7b43878e84b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90')" onclick="openLightbox(2)"><div class="gallery-caption">RS3 8Y – Stage 3</div></div>
+            <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1544636331-9114363d6354?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90')" onclick="openLightbox(3)"><div class="gallery-caption">Golf 8 R – 360kW</div></div>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
-        <h2 class="section-title">Visit Us</h2>
-        <div style="background:var(--gray); padding:4rem 2rem; text-align:center; border-radius:16px;">
-            <p style="font-size:1.5rem;"><strong>487 Karel Trichardt Avenue, Mountain View, Pretoria</strong></p>
-            <p>Mon–Thu: 07:30–17:00 • Fri: 07:30–16:00</p>
-            <div style="margin:2rem 0;">
-                <a href="https://wa.me/27827518458" class="btn btn-whatsapp">WhatsApp</a>
-                <a href="tel:0127518458" class="btn btn-call">Call</a>
-            </div>
+    <section id="contact" style="text-align:center;">
+        <h2 class="section-title">VISIT US</h2>
+        <p style="font-size:1.6rem;"><strong>487 Karel Trichardt Ave, Mountain View, Pretoria</strong></p>
+        <p>Mon–Thu: 07:30–17:00 • Fri: 07:30–16:00</p>
+        <div style="margin:3rem 0;">
+            <a href="https://wa.me/27827518458" class="btn btn-wa">WhatsApp</a>
+            <a href="tel:0127518458" class="btn btn-call">Call</a>
         </div>
     </section>
 
-    <!-- LIGHTBOX -->
+    <!-- LIGHTBOX + SWIPE -->
     <div class="lightbox" id="lightbox">
         <span class="close-lightbox" onclick="closeLightbox()">×</span>
         <span class="nav-arrow prev" onclick="changePhoto(-1)">‹</span>
         <span class="nav-arrow next" onclick="changePhoto(1)">›</span>
         <img id="lightbox-img" src="" alt="">
-        <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
 
     <div class="wa-float"><a href="https://wa.me/27827518458" target="_blank">WhatsApp</a></div>
 
-    <footer style="background:var(--navy); padding:3rem; text-align:center; color:#888;">
-        © 2025 Paul's Mini Workshop • RMI • MIWA • Celtic Tuning Accredited
-    </footer>
-
     <script>
-        const images = [
-            {src: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90", caption: "Mini Cooper GP – Stage 2"},
-            {src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90", caption: "BMW M4 Competition – DPF Delete & Remap"},
-            {src: "https://images.unsplash.com/photo-1592194996308-7b43878e84b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90", caption: "Audi RS3 8V – Stage 3+ Tuning"},
-            {src: "https://images.unsplash.com/photo-1544636331-9114363d6354?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90", caption: "VW Golf 8 R – Full Dyno Tune"},
-            {src: "https://images.unsplash.com/photo-1558642084-f3082c2a9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90", caption: "BMW M340i xDrive – Stage 2"},
-            {src: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=90", caption: "Classic Mini – Restoration Project"}
-        ];
-        let currentIndex = 0;
-        let startX = 0;
-
-        function openLightbox(index) {
-            currentIndex = index;
-            document.getElementById("lightbox-img").src = images[index].src;
-            document.getElementById("lightbox-caption").textContent = images[index].caption;
-            document.getElementById("lightbox").classList.add("active");
-            document.body.style.overflow = "hidden";
-        }
-        function closeLightbox() {
-            document.getElementById("lightbox").classList.remove("active");
-            document.body.style.overflow = "auto";
-        }
-        function changePhoto(dir) {
-            currentIndex = (currentIndex + dir + images.length) % images.length;
-            document.getElementById("lightbox-img").src = images[currentIndex].src;
-            document.getElementById("lightbox-caption").textContent = images[currentIndex].caption;
-        }
-
-        // Swipe support (mobile + desktop drag)
-        const lightbox = document.getElementById("lightbox");
-        lightbox.addEventListener("touchstart", e => { startX = e.touches[0].clientX; });
-        lightbox.addEventListener("touchend", e => {
-            if (!startX) return;
-            let endX = e.changedTouches[0].clientX;
-            let diff = startX - endX;
-            if (Math.abs(diff) > 50) { // minimum swipe distance
-                changePhoto(diff > 0 ? 1 : -1);
-            }
-            startX = 0;
-        });
-
-        // Mouse drag support
-        let isDown = false;
-        lightbox.addEventListener("mousedown", e => { isDown = true; startX = e.clientX; });
-        lightbox.addEventListener("mousemove", e => { if (!isDown) return; });
-        lightbox.addEventListener("mouseup", e => {
-            if (!isDown) return;
-            let diff = startX - e.clientX;
-            if (Math.abs(diff) > 80) changePhoto(diff > 0 ? 1 : -1);
-            isDown = false;
-        });
-        lightbox.addEventListener("mouseleave", () => isDown = false);
-
-        // Keyboard
-        document.addEventListener("keydown", e => {
-            if (!lightbox.classList.contains("active")) return;
-            if (e.key === "Escape") closeLightbox();
-            if (e.key === "ArrowLeft") changePhoto(-1);
-            if (e.key === "ArrowRight") changePhoto(1);
-        });
+        const images = ["https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90","https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90","https://images.unsplash.com/photo-1592194996308-7b43878e84b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90","https://images.unsplash.com/photo-1544636331-9114363d6354?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90"];
+        let currentIndex = 0, startX = 0;
+        function openLightbox(i){ currentIndex=i; document.getElementById("lightbox-img").src=images[i]; document.getElementById("lightbox").classList.add("active"); document.body.style.overflow="hidden"; }
+        function closeLightbox(){ document.getElementById("lightbox").classList.remove("active"); document.body.style.overflow="auto"; }
+        function changePhoto(d){ currentIndex=(currentIndex+d+images.length)%images.length; document.getElementById("lightbox-img").src=images[currentIndex]; }
+        const lb=document.getElementById("lightbox");
+        lb.addEventListener("touchstart",e=>startX=e.touches[0].clientX);
+        lb.addEventListener("touchend",e=>{ if(startX){ let diff=startX-e.changedTouches[0].clientX; if(Math.abs(diff)>60) changePhoto(diff>0?1:-1); startX=0; }});
+        let dragging=false;
+        lb.addEventListener("mousedown",e=>{dragging=true;startX=e.clientX;});
+        lb.addEventListener("mouseup",e=>{if(dragging&&Math.abs(startX-e.clientX)>80)changePhoto(startX-e.clientX>0?1:-1);dragging=false;});
+        document.addEventListener("keydown",e=>{if(lb.classList.contains("active")){if(e.key==="Escape")closeLightbox();if(e.key==="ArrowLeft")changePhoto(-1);if(e.key==="ArrowRight")changePhoto(1);}});
     </script>
 </body>
 </html>
