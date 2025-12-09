@@ -30,7 +30,7 @@
         .hero {
             min-height: 100vh;
             background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)),
-                        url('https://images.unsplash.com/photo-1559410682-3a83b3c27e42?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat fixed;
+                        url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;
             display: flex;
             align-items: center;
             text-align: center;
@@ -118,9 +118,50 @@
             text-align: center;
             transition: 0.4s;
             border: 1px solid var(--blue);
+            position: relative;
+            overflow: hidden;
         }
-        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(59,130,246,0.3); }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+        }
+        .card.service-1::before { background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); }
+        .card.service-2::before { background-image: url('https://images.unsplash.com/photo-1583121274602-d9e21fe7a272?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); }
+        .card.service-3::before { background-image: url('https://images.unsplash.com/photo-1581100353366-34e250e2b3d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); }
+        .card-content { position: relative; z-index: 1; }
         .card i { font-size: 4rem; color: var(--accent); margin-bottom: 1rem; }
+
+        /* Gallery Section */
+        .gallery { background: var(--navy); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            transition: 0.3s;
+        }
+        .gallery-item:hover { transform: scale(1.05); }
+        .gallery-item:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); }
+        .gallery-item:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); }
+        .gallery-item:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); }
+        .gallery-item:nth-child(4) { background-image: url('https://images.unsplash.com/photo-1605559424843-9e4c228fb845?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); }
+        .gallery-item:nth-child(5) { background-image: url('https://images.pexels.com/photos/1166755/pexels-photo-1166755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); }
+        .gallery-item:nth-child(6) { background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); }
 
         /* Contact & Hours */
         .contact-info {
@@ -150,6 +191,7 @@
         .fb { background: #1877F2; }
         .wa { background: #25D366; }
         .maps { background: #EA4335; }
+        #map { width: 100%; height: 300px; margin-top: 2rem; border: none; border-radius: 12px; }
 
         /* Floating WhatsApp */
         .wa-float {
@@ -173,7 +215,22 @@
         }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); } 70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
 
-        footer { background: #0f172a; padding: 3rem; text-align: center; font-size: 0.9rem; }
+        footer { 
+            background: #0f172a; 
+            padding: 3rem; 
+            text-align: center; 
+            font-size: 0.9rem; 
+            background-image: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15,23,42,0.8); }
+        footer > * { position: relative; z-index: 1; }
+        .social-icons { margin-top: 1rem; }
+        .social-icons a { color: var(--light-blue); margin: 0 1rem; font-size: 1.5rem; transition: 0.3s; }
+        .social-icons a:hover { color: var(--accent); }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 3.2rem; }
             .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--navy); padding: 1rem 0; }
@@ -192,8 +249,8 @@
             <p>BMW • MINI • AUDI • VW SPECIALIST</p>
             <p style="font-size:1.4rem; margin:2rem 0;">Celtic Tuning Accredited • RMI & MIWA Approved • Since 2011</p>
             <div>
-                <a href="https://wa.me/27827518458" class="btn btn-whatsapp">WhatsApp Now</a>
-                <a href="tel:0127518458" class="btn btn-call">Call 012 751 8458</a>
+                <a href="https://wa.me/27827518458" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+                <a href="tel:0127518458" class="btn btn-call"><i class="fas fa-phone"></i> Call 012 751 8458</a>
             </div>
         </div>
     </section>
@@ -206,6 +263,7 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#hours">Hours</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -216,21 +274,41 @@
     <section id="services" class="services">
         <h2 class="section-title">Professional Services</h2>
         <div class="grid">
-            <div class="card">
-                <i class="fas fa-wrench"></i>
-                <h3>Major & Minor Services</h3>
-                <p>Genuine parts & dealer-level diagnostics for all German vehicles</p>
+            <div class="card service-1">
+                <div class="card-content">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Major & Minor Services</h3>
+                    <p>Genuine parts & dealer-level diagnostics for all German vehicles</p>
+                </div>
             </div>
-            <div class="card">
-                <i class="fas fa-bolt"></i>
-                <h3>Celtic Chip Tuning</h3>
-                <p>Stage 1–3 remaps • DPF/EGR/AdBlue solutions • More power + economy</p>
+            <div class="card service-2">
+                <div class="card-content">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Celtic Chip Tuning</h3>
+                    <p>Stage 1–3 remaps • DPF/EGR/AdBlue solutions • More power + economy</p>
+                </div>
             </div>
-            <div class="card">
-                <i class="fas fa-car-battery"></i>
-                <h3>Electrical & Diagnostics</h3>
-                <p>Latest BMW ISTA, VCDS & specialist tools</p>
+            <div class="card service-3">
+                <div class="card-content">
+                    <i class="fas fa-car-battery"></i>
+                    <h3>Electrical & Diagnostics</h3>
+                    <p>Latest BMW ISTA, VCDS & specialist tools</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">Our Workshop</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.2rem;">See our team in action – from diagnostics to dyno tuning on your BMW, Mini, Audi or VW.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
         </div>
     </section>
 
@@ -248,10 +326,11 @@
                 <a href="https://www.facebook.com/Paulsminiworkshop" class="social-btn fb" target="_blank">
                     <i class="fab fa-facebook-f"></i> Facebook
                 </a>
-                <a href="https://g.page/pauls-mini-workshop" class="social-btn maps" target="_blank">
+                <a href="#" onclick="document.getElementById('map').scrollIntoView();" class="social-btn maps">
                     <i class="fas fa-map-marker-alt"></i> Google Maps
                 </a>
             </div>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.123456789!2d28.123456789!3d-25.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956123456789%3A0xabcdef123456789!2s487%20Karel%20Trichardt%20Ave%2C%20Mountain%20View%2C%20Pretoria%2C%200082%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
@@ -265,7 +344,17 @@
     <footer>
         <p>© 2025 Paul's Mini Workshop – Professional German Car Mechanic Pretoria</p>
         <p>RMI • MIWA • Celtic Tuning Accredited</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Paulsminiworkshop" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/27827518458" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://g.page/pauls-mini-workshop" target="_blank"><i class="fab fa-google"></i></a>
+        </div>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
