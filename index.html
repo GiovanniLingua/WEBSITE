@@ -3,159 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium vehicle repairs & Celtic Tuning accredited chip tuning in Pretoria. Specializing in BMW, Mini, Audi & VW. RMI & MIWA approved.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://paulsminiworkshop.co.za/">
-    <title>Paul's Mini Workshop | BMW, Mini, Audi & VW Specialist | Pretoria</title>
+    <meta name="description" content="Professional BMW, Mini, Audi & VW repairs + Celtic Tuning in Pretoria. RMI & MIWA approved mechanic.">
+    <title>Paul's Mini Workshop | Premium German Car Mechanic Pretoria</title>
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts + Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;800&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <style>
         :root {
-            --black: #1a1a1a;
-            --dark-gray: #2d2d2d;
-            --silver: #e5e5e5;
-            --red: #e30613;
-            --white: #ffffff;
+            --navy: #0f172a;
+            --blue: #1e40af;
+            --light-blue: #3b82f6;
+            --accent: #f59e0b;
+            --gray: #1e293b;
+            --white: #f8fafc;
         }
         * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: 'Roboto', sans-serif; color: var(--white); background: var(--black); line-height: 1.6; }
-        h1, h2, h3, h4 { font-family: 'Orbitron', sans-serif; letter-spacing: 1px; }
+        body { font-family: 'Exo 2', sans-serif; color: var(--white); background: var(--navy); overflow-x:hidden; }
 
-        /* Header & Hero */
+        /* Full-screen Car Hero */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
-            height: 100vh;
+            min-height: 100vh;
+            background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)),
+                        url('https://images.unsplash.com/photo-1559410682-3a83b3c27e42?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat fixed;
             display: flex;
             align-items: center;
             text-align: center;
             position: relative;
         }
+        @media (max-width: 768px) {
+            .hero { background-attachment: scroll; }
+        }
         .hero-content {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
         }
         .hero h1 {
-            font-size: 4.5rem;
-            color: var(--red);
-            text-shadow: 0 0 20px rgba(227,6,19,0.5);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5rem;
+            color: var(--light-blue);
+            text-shadow: 0 0 30px rgba(59,130,246,0.6);
         }
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin: 1.5rem 0;
         }
         .btn {
             display: inline-block;
-            padding: 14px 36px;
-            background: var(--red);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
+            padding: 16px 40px;
+            margin: 10px;
+            border-radius: 50px;
             font-weight: bold;
-            transition: 0.3s;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
         }
-        .btn:hover { background: #c2000b; transform: scale(1.05); }
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        .btn-whatsapp:hover { background: #1da851; transform: scale(1.08); }
+        .btn-call { background: var(--light-blue); }
+        .btn-call:hover { background: #2563eb; transform: scale(1.08); }
+        .btn-maps { background: #f59e0b; }
+        .btn-maps:hover { background: #d97706; }
 
-        /* Navbar */
+        /* Fixed Navbar */
         nav {
-            background: rgba(26,26,26,0.95);
             position: fixed;
+            top: 0;
             width: 100%;
+            background: rgba(15,23,42,0.95);
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-        .navbar-container {
-            max-width: 1200px;
+        .nav-container {
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 1rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .logo { font-size: 1.8rem; color: var(--red); font-family: 'Orbitron'; }
-        .nav-menu {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        .nav-menu a:hover, .nav-menu a.active { color: var(--red); }
+        .logo { font-family: 'Orbitron'; font-size: 1.8rem; color: var(--light-blue); }
+        .nav-menu { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-menu a { color: white; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .nav-menu a:hover, .nav-menu a.active { color: var(--accent); }
 
         /* Sections */
-        section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        section { padding: 100px 20px; max-width: 1300px; margin: 0 auto; }
         .section-title {
-            font-size: 3rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
             text-align: center;
+            color: var(--light-blue);
             margin-bottom: 3rem;
-            color: var(--red);
         }
-        .about, .services { background: var(--dark-gray); }
-        .services-grid {
+        .services { background: var(--gray); }
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
-        .service-card {
-            background: #333;
-            padding: 2rem;
-            border-radius: 8px;
+        .card {
+            background: rgba(30,41,59,0.8);
+            padding: 2.5rem;
+            border-radius: 12px;
             text-align: center;
-            transition: 0.3s;
+            transition: 0.4s;
+            border: 1px solid var(--blue);
         }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(227,6,19,0.3); }
-        .service-card i { font-size: 3.5rem; color: var(--red); margin-bottom: 1rem; }
+        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(59,130,246,0.3); }
+        .card i { font-size: 4rem; color: var(--accent); margin-bottom: 1rem; }
 
-        .hours, .contact { background: var(--black); }
-        .hours ul { max-width: 500px; margin: 0 auto; font-size: 1.2rem; }
-        .hours li { padding: 0.8rem 0; border-bottom: 1px solid #444; }
-
-        /* Contact */
-        .contact form {
-            max-width: 600px;
-            margin: 2rem auto;
-            display: grid;
-            gap: 1rem;
+        /* Contact & Hours */
+        .contact-info {
+            text-align: center;
+            font-size: 1.4rem;
+            background: var(--gray);
+            padding: 4rem 2rem;
         }
-        .contact input, .contact textarea {
-            padding: 1rem;
-            border: none;
-            border-radius: 4px;
-            background: #333;
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
             color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.3rem;
         }
+        .fb { background: #1877F2; }
+        .wa { background: #25D366; }
+        .maps { background: #EA4335; }
 
-        /* Footer */
-        footer {
-            background: #111;
-            padding: 3rem;
-            text-align: center;
+        /* Floating WhatsApp */
+        .wa-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
         }
-        footer a { color: var(--red); text-decoration: none; }
+        .wa-float a {
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); } 70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
 
-        /* Mobile Menu */
+        footer { background: #0f172a; padding: 3rem; text-align: center; font-size: 0.9rem; }
         @media (max-width: 768px) {
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: var(--dark-gray); }
+            .hero h1 { font-size: 3.2rem; }
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--navy); padding: 1rem 0; }
             .nav-menu.active { display: flex; }
-            .hamburger { display: block; font-size: 1.8rem; cursor: pointer; color: white; }
-            .hero h1 { font-size: 3rem; }
+            .hamburger { display: block; font-size: 2rem; cursor: pointer; color: white; }
         }
         .hamburger { display: none; }
     </style>
@@ -166,21 +189,22 @@
     <section class="hero">
         <div class="hero-content">
             <h1>PAUL'S MINI WORKSHOP</h1>
-            <p>BMW • MINI • AUDI • VW SPECIALIST & CELTIC TUNING ACCREDITED</p>
-            <p style="font-size:1.2rem; margin:2rem 0;">RMI • MIWA Approved | Pretoria since 2011</p>
-            <a href="tel:0127518458" class="btn"><i class="fas fa-phone"></i> Call 012 751 8458</a>
-            <a href="#contact" class="btn" style="background:transparent; border:2px solid var(--red); margin-left:1rem;">Get a Quote</a>
+            <p>BMW • MINI • AUDI • VW SPECIALIST</p>
+            <p style="font-size:1.4rem; margin:2rem 0;">Celtic Tuning Accredited • RMI & MIWA Approved • Since 2011</p>
+            <div>
+                <a href="https://wa.me/27827518458" class="btn btn-whatsapp">WhatsApp Now</a>
+                <a href="tel:0127518458" class="btn btn-call">Call 012 751 8458</a>
+            </div>
         </div>
     </section>
 
     <!-- Navbar -->
     <nav>
-        <div class="navbar-container">
+        <div class="nav-container">
             <div class="logo">Paul's Mini Workshop</div>
-            <span class="hamburger" onclick="toggleMenu()">☰</span>
+            <span class="hamburger" onclick="document.getElementById('navMenu').classList.toggle('active')">Menu</span>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#hours">Hours</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -188,79 +212,60 @@
         </div>
     </nav>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <h2 class="section-title">German Car Specialists You Can Trust</h2>
-        <p style="text-align:center; max-width:800px; margin:0 auto 3rem; font-size:1.2rem;">
-            Established in 2011, we’ve built our reputation on precision, honesty, and passion for European performance cars. 
-            RMI & MIWA accredited, partnered with all major warranty providers, and proud <strong>Celtic Tuning</strong> dealers.
-        </p>
-    </section>
-
     <!-- Services -->
     <section id="services" class="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-tools"></i>
+        <h2 class="section-title">Professional Services</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-wrench"></i>
                 <h3>Major & Minor Services</h3>
-                <p>Full mechanical & electrical repairs for all makes – with specialist knowledge in German brands.</p>
+                <p>Genuine parts & dealer-level diagnostics for all German vehicles</p>
             </div>
-            <div class="service-card">
-                <i class="fas fa-tachometer-alt"></i>
+            <div class="card">
+                <i class="fas fa-bolt"></i>
                 <h3>Celtic Chip Tuning</h3>
-                <p>Stage 1–3 remaps, DPF/EGR solutions, AdBlue delete – more power, better economy, done right.</p>
+                <p>Stage 1–3 remaps • DPF/EGR/AdBlue solutions • More power + economy</p>
             </div>
-            <div class="service-card">
-                <i class="fas fa-diagnose"></i>
-                <h3>Advanced Diagnostics</h3>
-                <p>Latest dealer-level tools for BMW, Mini, Audi & VW fault finding.</p>
+            <div class="card">
+                <i class="fas fa-car-battery"></i>
+                <h3>Electrical & Diagnostics</h3>
+                <p>Latest BMW ISTA, VCDS & specialist tools</p>
             </div>
         </div>
     </section>
 
-    <!-- Hours -->
-    <section id="hours" class="hours">
-        <h2 class="section-title">Opening Hours</h2>
-        <ul>
-            <li>Monday – Thursday: 07:30 – 17:00</li>
-            <li>Friday: 07:30 – 16:00</li>
-            <li>Saturday & Sunday: Closed</li>
-        </ul>
-    </section>
+    <!-- Hours & Contact -->
+    <section id="contact">
+        <h2 class="section-title">Visit Us Today</h2>
+        <div class="contact-info">
+            <p><strong>487 Karel Trichardt Avenue, Mountain View, Pretoria</strong></p>
+            <p>Monday – Thursday: 07:30 – 17:00<br>Friday: 07:30 – 16:00<br>Weekends: Closed</p>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <p style="text-align:center; margin-bottom:2rem;">
-            487 Karel Trichardt Ave, Mountain View, Pretoria<br>
-            <a href="tel:0127518458" style="color:var(--red); font-size:1.5rem; font-weight:bold;">012 751 8458 / 012 751 8459</a><br>
-            <a href="mailto:office.paulminiworkshop@gmail.com">office.paulminiworkshop@gmail.com</a>
-        </p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message / Vehicle Details" rows="5" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-        <div style="text-align:center; margin-top:3rem;">
-            <a href="https://www.google.com/maps/dir/?api=1&destination=487+Karel+Trichardt+Ave,Mountain+View,Pretoria" target="_blank" class="btn">
-                <i class="fas fa-map-marker-alt"></i> Open in Google Maps
-            </a>
+            <div class="social-buttons">
+                <a href="https://wa.me/27827518458" class="social-btn wa">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.facebook.com/Paulsminiworkshop" class="social-btn fb" target="_blank">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://g.page/pauls-mini-workshop" class="social-btn maps" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> Google Maps
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Floating WhatsApp Button -->
+    <div class="wa-float">
+        <a href="https://wa.me/27827518458" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
     <footer>
-        <p>&copy; 2025 Paul's Mini Workshop | RMI • MIWA • Celtic Tuning Accredited</p>
-        <p><a href="https://www.facebook.com/Paulsminiworkshop">Facebook</a> • Pretoria, South Africa</p>
+        <p>© 2025 Paul's Mini Workshop – Professional German Car Mechanic Pretoria</p>
+        <p>RMI • MIWA • Celtic Tuning Accredited</p>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("active");
-        }
-    </script>
 </body>
 </html>
