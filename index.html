@@ -1,172 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tattoo Island | Tattoo & Piercing Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tattoo Island | Tattoo & Piercing Studio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
 
-        body {
-            background-color: #0e0e0e;
-            color: #f5f5f5;
-            line-height: 1.6;
-        }
+body {
+    background: #000;
+    color: #f2f2f2;
+}
 
-        header {
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-                        url('https://images.unsplash.com/photo-1542727365-19732a80dcfd') center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+        url('background.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
 
-        header h1 {
-            font-size: 3.5rem;
-            letter-spacing: 3px;
-        }
+.hero-content img {
+    max-width: 220px;
+    margin-bottom: 25px;
+}
 
-        header p {
-            font-size: 1.2rem;
-            margin-top: 15px;
-            color: #cfcfcf;
-        }
+.hero-content h1 {
+    font-size: 3.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 30px;
-            background: #b30000;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 3px;
-            transition: 0.3s;
-        }
+.hero-content p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.2rem;
+    color: #d0d0d0;
+    line-height: 1.8;
+}
 
-        .btn:hover {
-            background: #ff1a1a;
-        }
+/* BUTTONS */
+.buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-        section {
-            padding: 70px 10%;
-        }
+.btn {
+    padding: 14px 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.2rem;
-            color: #ffffff;
-        }
+.btn-red {
+    background: #b30000;
+}
 
-        .about {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-            color: #cccccc;
-        }
+.btn-red:hover {
+    background: #ff1a1a;
+}
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
+.btn-dark {
+    background: #1a1a1a;
+    border: 1px solid #444;
+}
 
-        .service-box {
-            background: #1a1a1a;
-            padding: 25px;
-            border-left: 4px solid #b30000;
-            transition: 0.3s;
-        }
+.btn-dark:hover {
+    background: #333;
+}
 
-        .service-box:hover {
-            transform: translateY(-5px);
-            background: #222;
-        }
+/* INFO SECTION */
+section {
+    padding: 70px 10%;
+    background: #0c0c0c;
+}
 
-        .contact {
-            text-align: center;
-        }
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
 
-        .contact p {
-            margin: 10px 0;
-            color: #cccccc;
-        }
+.info {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    color: #cfcfcf;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
 
-        footer {
-            background: #080808;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #777;
-        }
+/* CONTACT */
+.contact p {
+    margin: 10px 0;
+}
 
-        @media(max-width: 600px) {
-            header h1 {
-                font-size: 2.4rem;
-            }
-        }
-    </style>
+/* FOOTER */
+footer {
+    background: #050505;
+    padding: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+@media(max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HERO -->
-    <header>
-        <div>
-            <h1>TATTOO ISLAND</h1>
-            <p>Tattoo & Piercing Studio</p>
-            <a href="#contact" class="btn">Book Now</a>
-        </div>
-    </header>
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
 
-    <!-- ABOUT -->
-    <section>
-        <h2>About Us</h2>
-        <p class="about">
-            Tattoo Island is a professional tattoo and piercing studio based in
-            Sinoville, Pretoria. We specialize in high-quality custom tattoos,
-            clean line work, and safe piercings in a hygienic environment.
-            Walk-ins and bookings are welcome.
+        <!-- LOGO -->
+        <img src="logo.png" alt="Tattoo Island Logo">
+
+        <!-- NAME -->
+        <h1>TATTOO ISLAND</h1>
+
+        <!-- CREATIVE MOTTO -->
+        <p>
+            Welcome to Tattoo Island — where passion, precision, and creativity
+            collide. We are a collective of dedicated artists who came together
+            to create more than tattoos — we create permanent art, personal
+            stories, and unforgettable experiences.
         </p>
-    </section>
 
-    <!-- SERVICES -->
-    <section>
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service-box">Custom Tattoos</div>
-            <div class="service-box">Black & Grey Tattoos</div>
-            <div class="service-box">Fine Line Tattoos</div>
-            <div class="service-box">Piercings</div>
-            <div class="service-box">Touch-Ups</div>
-            <div class="service-box">Consultations</div>
+        <!-- BUTTONS -->
+        <div class="buttons">
+            <!-- WHATSAPP -->
+            <a class="btn btn-red"
+               href="https://wa.me/27739231024"
+               target="_blank">
+               WhatsApp Us
+            </a>
+
+            <!-- FACEBOOK -->
+            <a class="btn btn-dark"
+               href="https://www.facebook.com/profile.php?id=108903331998431"
+               target="_blank">
+               Facebook Page
+            </a>
         </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Contact Us</h2>
+    </div>
+</div>
+
+<!-- INFO -->
+<section>
+    <h2>Our Studio</h2>
+    <div class="info">
+        <p>
+            Tattoo Island is a professional tattoo and piercing studio located in
+            Sinoville, Pretoria. We focus on custom designs, clean execution, and
+            strict hygiene standards. Whether it's your first tattoo or your
+            next masterpiece, you're in experienced hands.
+        </p>
+
         <div class="contact">
             <p>📍 195 Mirca Rd, Sinoville, Pretoria, South Africa, 0186</p>
             <p>📞 073 923 1024</p>
             <p>📧 tattooisland22@gmail.com</p>
-            <p>🔞 18+ Only | Strict hygiene standards</p>
+            <p>🔞 18+ Only | Professional & Sterile Environment</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        © 2026 Tattoo Island | Tattoo & Piercing Studio
-    </footer>
+<footer>
+    © 2026 Tattoo Island | Tattoo & Piercing Studio
+</footer>
 
 </body>
 </html>
