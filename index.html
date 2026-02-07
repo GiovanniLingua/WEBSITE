@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNA09 Trading (Pty) Ltd | Construction Consulting & Accounting Services</title>
+    <title>DNA09 Trading (Pty) Ltd | Construction & Accounting Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         :root {
@@ -12,85 +12,21 @@
             --accent: #10b981;
             --dark: #0f172a;
             --light: #f8fafc;
-            --gray: #64748b;
         }
         * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
             background: var(--light);
             color: #1e293b;
             line-height: 1.7;
         }
-        /* Fixed Top Bar with Hamburger */
-        .top-bar {
-            background: var(--dark);
-            color: white;
-            padding: 1rem 2rem;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 2000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-        .hamburger {
-            font-size: 2.2rem;
-            cursor: pointer;
-            display: none;
-        }
-        .logo-top {
-            width: 110px;
-            height: auto;
-        }
-        .top-contact {
-            font-size: 0.95rem;
-            text-align: right;
-        }
-        .top-contact a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2.8rem;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        nav a:hover { color: var(--secondary); }
-
-        @media (max-width: 920px) {
-            .hamburger { display: block; }
-            nav ul {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: 100vh;
-                background: var(--dark);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: left 0.4s ease;
-                z-index: 1999;
-            }
-            nav ul.active { left: 0; }
-        }
-
         header {
             background: linear-gradient(rgba(30,58,138,0.85), rgba(30,58,138,0.85)),
-                        url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat fixed;
+                        url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
             color: white;
             text-align: center;
-            padding: 180px 20px 120px;
-            margin-top: 70px;
+            padding: 100px 20px 60px;
         }
         .logo {
             width: 180px;
@@ -101,17 +37,45 @@
             margin-bottom: 25px;
         }
         header h1 {
-            font-size: 3.8rem;
+            font-size: 3.6rem;
             margin-bottom: 12px;
             font-weight: 700;
-            letter-spacing: -1px;
         }
-        .tagline { font-size: 1.6rem; opacity: 0.92; max-width: 800px; margin: 0 auto; }
-
-        section { padding: 100px 20px; max-width: 1280px; margin: 0 auto; }
+        .tagline, .address-info {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0.6rem auto;
+        }
+        .address-info {
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        nav {
+            background: var(--dark);
+            padding: 1.4rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.15rem;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--secondary); }
+        section { padding: 90px 20px; max-width: 1280px; margin: 0 auto; }
         h2 {
             color: var(--primary);
-            font-size: 3rem;
+            font-size: 2.8rem;
             text-align: center;
             margin-bottom: 2.5rem;
             position: relative;
@@ -141,11 +105,6 @@
         .service-card:hover {
             transform: translateY(-18px);
             box-shadow: 0 40px 90px rgba(0,0,0,0.22);
-        }
-        .service-img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
         }
         .card-content { padding: 3rem; }
         .card-content h3 {
@@ -191,12 +150,12 @@
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 3rem;
-            margin: 3rem 0;
+            gap: 3.5rem;
+            margin: 3.5rem 0;
         }
         .social-icon {
             color: white;
-            font-size: 3.5rem;
+            font-size: 4rem;
             transition: all 0.35s ease;
         }
         .social-icon:hover {
@@ -233,55 +192,30 @@
             font-size: 0.95rem;
             opacity: 0.8;
         }
-        /* Cookie Banner */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #1e293b;
-            color: white;
-            padding: 1.4rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 -6px 20px rgba(0,0,0,0.4);
-            z-index: 10000;
-        }
-        .cookie-btn {
-            background: var(--accent);
-            color: white;
-            border: none;
-            padding: 12px 32px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1.05rem;
-        }
         @media (max-width: 768px) {
-            header { padding-top: 140px; padding-bottom: 80px; }
+            header { padding: 100px 15px 60px; }
             header h1 { font-size: 2.9rem; }
-            .services-grid { grid-template-columns: 1fr; }
-            .cookie-banner { flex-direction: column; gap: 1rem; text-align: center; }
+            nav ul { flex-direction: column; gap: 1.5rem; }
+            .social-icons { gap: 2.5rem; }
+            .social-icon { font-size: 3.2rem; }
+            .whatsapp-float { bottom: 30px; right: 30px; width: 70px; height: 70px; font-size: 2.6rem; }
         }
     </style>
 </head>
 <body>
 
-<!-- Fixed Top Bar with Hamburger Menu -->
-<div class="top-bar">
-    <div class="hamburger" id="hamburgerBtn"><i class="fas fa-bars"></i></div>
-    <img src="placeholder-logo.png" alt="DNA09 Logo" class="logo-top"> <!-- Replace with your logo -->
-    <div class="top-contact">
-        DNA09 Trading (Pty) Ltd • Co Reg: 2009/006554/07<br>
-        PostNet Suite 112, Private Bag 7214, Witbank, 1035<br>
-        <strong>Cell:</strong> 082 618 0296 • <a href="mailto:info@dna09.co.za">info@dna09.co.za</a>
-    </div>
-</div>
+<header>
+    <img src="placeholder-logo.png" alt="DNA09 Trading Logo" class="logo"> <!-- Replace with your logo file -->
+    <h1>DNA09 Trading (Pty) Ltd</h1>
+    <p class="tagline">DNA TRADING</p>
+    <p class="address-info">
+        PostNet Suite 112 • Private Bag 7214 • Witbank, 1035<br>
+        Co Reg: 2009/006554/07 • Cell: 082 618 0296 • Email: info@dna09.co.za
+    </p>
+</header>
 
-<!-- Mobile Slide Menu -->
 <nav>
-    <ul id="mobileMenu">
+    <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#construction">Construction</a></li>
@@ -290,26 +224,19 @@
     </ul>
 </nav>
 
-<header>
-    <img src="https://www.logoku.com/image/data/items1/1747466167_logokucom_modern-infinity-dna-helix.jpg.webp" alt="DNA09 Trading Logo" class="logo">
-    <h1>DNA09 Trading (Pty) Ltd</h1>
-    <p class="tagline">Co Reg: 2009/006554/07 • Expert Construction Consulting & Professional Accounting Services • Witbank, Mpumalanga</p>
-</header>
-
 <section id="home">
     <h2>Welcome to DNA09 Trading</h2>
     <p style="max-width:900px; margin:0 auto 3rem; font-size:1.3rem; text-align:center;">
-        A trusted partner delivering excellence in two specialist areas:<br>
-        → Construction consulting, project support & premium materials supply<br>
-        → Accurate, fully compliant accounting, bookkeeping & tax services
+        Professional services in two key areas:<br>
+        → Expert construction consulting with material supply<br>
+        → Accurate, compliant accounting & bookkeeping
     </p>
 </section>
 
 <section id="about">
     <h2>About Us</h2>
     <p style="max-width:920px; margin:0 auto 3rem; font-size:1.25rem; text-align:center;">
-        DNA09 Trading (Pty) Ltd is a Witbank-based company committed to quality and reliability.<br>
-        We empower contractors, developers and business owners with practical construction solutions and professional financial management — so you can build with confidence and manage with clarity.
+        DNA09 Trading (Pty) Ltd is a trusted Witbank-based company delivering excellence in construction consulting and financial services. We support contractors, developers and businesses with practical project solutions and professional financial management.
     </p>
 </section>
 
@@ -429,44 +356,25 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- Cookie Consent -->
-<div class="cookie-banner" id="cookieBanner">
-    <div>We use cookies to enhance your experience and analyze site usage.</div>
-    <button class="cookie-btn" id="acceptCookies">Allow Cookies</button>
-</div>
-
 <footer>
     <p>© 2026 DNA09 Trading (Pty) Ltd | All Rights Reserved</p>
     <p class="footer-credit">This page was built by <strong>NEXUS IT 2026</strong></p>
 </footer>
 
 <script>
-    // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburgerBtn');
-    const menu = document.getElementById('mobileMenu');
-
-    hamburger.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
-
-    // Close menu when link clicked
-    document.querySelectorAll('#mobileMenu a').forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('active');
+    // Smooth scroll with offset for header height
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+            if (target) {
+                const headerHeight = 80; // approximate header height
+                const yOffset = -headerHeight;
+                const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
         });
-    });
-
-    // Cookie banner
-    const cookieBanner = document.getElementById('cookieBanner');
-    const acceptBtn = document.getElementById('acceptCookies');
-
-    if (!localStorage.getItem('cookiesAccepted')) {
-        cookieBanner.style.display = 'flex';
-    }
-
-    acceptBtn.addEventListener('click', () => {
-        localStorage.setItem('cookiesAccepted', 'true');
-        cookieBanner.style.display = 'none';
     });
 </script>
 
