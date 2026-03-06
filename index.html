@@ -1,1278 +1,291 @@
+/* ================================================================
+   CEEIT Solutions – Professional redesign colors & typography 2026
+   ================================================================ */
 
-<!DOCTYPE html>
-<html lang="en-ZA">
+:root {
+  --color-primary:      #1e40af;      /* main brand blue – trustworthy */
+  --color-primary-dark: #1e3a8a;
+  --color-primary-darker:#172554;
+  --color-primary-light:#3b82f6;
+  
+  --color-accent:       #0ea5e9;      /* fresh modern accent */
+  --color-accent-dark:  #0284c7;
+  
+  --color-dark:         #111827;      /* headings & strong text */
+  --color-gray-900:     #111827;
+  --color-gray-800:     #1f2937;
+  --color-gray-700:     #374151;
+  --color-gray-600:     #4b5563;
+  --color-gray-500:     #6b7280;
+  --color-gray-400:     #9ca3af;
+  --color-gray-300:     #d1d5db;
+  --color-gray-200:     #e5e7eb;
+  --color-gray-100:     #f3f4f6;
+  
+  --color-bg:           #f8fafc;      /* main page background */
+  --color-bg-card:      #ffffff;
+  --color-bg-light:     #f1f5f9;
+  
+  --color-success:      #10b981;
+  --color-warning:      #f59e0b;
+  
+  --radius-sm:          6px;
+  --radius:             8px;
+  --radius-lg:          12px;
+  
+  --shadow-sm:          0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow:             0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-md:          0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.05);
+  --shadow-lg:          0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  
+  --transition:         all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-<head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+/* ──────────────────────────────────────────────── */
+/* Base & Typography                                */
+/* ──────────────────────────────────────────────── */
 
-        <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="https://ceeit.co.za/wp-content/uploads/2025/10/Ceeit-RS-Transparent-2025.png" type="image/x-icon">
-    
-<title>CEEIT Solutions &#8211; Solutions</title>
-<meta name='robots' content='max-image-preview:large' />
-<link rel='dns-prefetch' href='//www.googletagmanager.com' />
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel="alternate" type="application/rss+xml" title="CEEIT Solutions &raquo; Feed" href="https://ceeit.co.za/feed/" />
-<link rel="alternate" type="application/rss+xml" title="CEEIT Solutions &raquo; Comments Feed" href="https://ceeit.co.za/comments/feed/" />
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://ceeit.co.za/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fceeit.co.za%2F" />
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://ceeit.co.za/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fceeit.co.za%2F&#038;format=xml" />
-<style id='wp-img-auto-sizes-contain-inline-css'>
-img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
-/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
-</style>
-<style id='wp-emoji-styles-inline-css'>
+body {
+  color: var(--color-gray-800);
+  background-color: var(--color-bg);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-	img.wp-smiley, img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 0.07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}
-/*# sourceURL=wp-emoji-styles-inline-css */
-</style>
-<style id='classic-theme-styles-inline-css'>
-/*! This file is auto-generated */
-.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
-/*# sourceURL=/wp-includes/css/classic-themes.min.css */
-</style>
-<style id='safe-svg-svg-icon-style-inline-css'>
-.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{fill:currentColor;height:100%;max-height:100%;max-width:100%;width:100%}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-dark);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
 
-/*# sourceURL=https://ceeit.co.za/wp-content/plugins/safe-svg/dist/safe-svg-block-frontend.css */
-</style>
-<style id='global-styles-inline-css'>
-:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
-:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
-:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
-:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
-/*# sourceURL=global-styles-inline-css */
-</style>
-<link rel='stylesheet' id='contact-form-7-css' href='https://ceeit.co.za/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.5' media='all' />
-<link rel='stylesheet' id='extendify-utility-styles-css' href='https://ceeit.co.za/wp-content/plugins/extendify/public/build/utility-minimum.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='bootstrap-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/bootstrap.min.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='fontawesome-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/font-awesome.min.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='tanda-icons-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/themify-icons.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='tanda-flaticons-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/flaticon-set.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='magnific-popup-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/magnific-popup.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='owl-carousel-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/owl.carousel.min.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='owl-carousal-default-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/owl.theme.default.min.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='animate-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/animate.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='bootsnav-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/bootsnav.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='tanda-style-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/style.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='tanda-responsive-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/responsive.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='tanda-woo-commerce-css' href='https://ceeit.co.za/wp-content/themes/tanda/css/woo-commerce.css?ver=6.9.1' media='all' />
-<link rel='stylesheet' id='tanda-fonts-css' href='//fonts.googleapis.com/css?family=Inter%3A200%2C300%2C400%2C600%2C700%2C800%26subset%3Dlatin%2Clatin-ext&#038;ver=1.0.0' media='all' />
-<link rel='stylesheet' id='elementor-frontend-css' href='https://ceeit.co.za/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.35.6' media='all' />
-<link rel='stylesheet' id='elementor-post-1399-css' href='https://ceeit.co.za/wp-content/uploads/elementor/css/post-1399.css?ver=1772582630' media='all' />
-<link rel='stylesheet' id='elementor-pro-css' href='https://ceeit.co.za/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.15.1' media='all' />
-<link rel='stylesheet' id='font-awesome-5-all-css' href='https://ceeit.co.za/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.35.6' media='all' />
-<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://ceeit.co.za/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.35.6' media='all' />
-<link rel='stylesheet' id='widget-icon-box-css' href='https://ceeit.co.za/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css?ver=3.35.6' media='all' />
-<link rel='stylesheet' id='elementor-post-22-css' href='https://ceeit.co.za/wp-content/uploads/elementor/css/post-22.css?ver=1772589238' media='all' />
-<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://ceeit.co.za/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742256095' media='all' />
-<link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://ceeit.co.za/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1742256106' media='all' />
-<script src="https://ceeit.co.za/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-<script src="https://ceeit.co.za/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); }
+h2 { font-size: clamp(1.875rem, 4.5vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3.8vw, 2.25rem); }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
 
-<!-- Google tag (gtag.js) snippet added by Site Kit -->
-<!-- Google Analytics snippet added by Site Kit -->
-<script src="https://www.googletagmanager.com/gtag/js?id=G-J5GRRXPQ4Z" id="google_gtagjs-js" async></script>
-<script id="google_gtagjs-js-after">
-window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
-gtag("set","linker",{"domains":["ceeit.co.za"]});
-gtag("js", new Date());
-gtag("set", "developer_id.dZTNiMT", true);
-gtag("config", "G-J5GRRXPQ4Z");
-//# sourceURL=google_gtagjs-js-after
-</script>
-<script src="https://ceeit.co.za/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.35.6" id="font-awesome-4-shim-js"></script>
-<link rel="https://api.w.org/" href="https://ceeit.co.za/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://ceeit.co.za/wp-json/wp/v2/pages/22" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ceeit.co.za/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 6.9.1" />
-<link rel="canonical" href="https://ceeit.co.za/" />
-<link rel='shortlink' href='https://ceeit.co.za/' />
-<meta name="generator" content="Site Kit by Google 1.173.0" /><meta name="generator" content="Redux 4.5.10" /><meta name="google-site-verification" content="wwEE6LabH6gD4EE_FyXFWgYVgyBt4_Ae6yrIfrTQTCc"><meta name="generator" content="Elementor 3.35.6; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
-<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>			<style>
-				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
-				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
-					background-image: none !important;
-				}
-				@media screen and (max-height: 1024px) {
-					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
-					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
-						background-image: none !important;
-					}
-				}
-				@media screen and (max-height: 640px) {
-					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
-					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
-						background-image: none !important;
-					}
-				}
-			</style>
-			<meta name="generator" content="Powered by Slider Revolution 6.6.14 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-<script>function setREVStartSize(e){
-			//window.requestAnimationFrame(function() {
-				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
-				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
-				try {
-					var pw = document.getElementById(e.c).parentNode.offsetWidth,
-						newh;
-					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
-					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
-					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
-					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
-					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
-					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
-					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
-					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
-					if(e.layout==="fullscreen" || e.l==="fullscreen")
-						newh = Math.max(e.mh,window.RSIH);
-					else{
-						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
-						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
-						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
-						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
-						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
-											
-						var nl = new Array(e.rl.length),
-							ix = 0,
-							sl;
-						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
-						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
-						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
-						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
-						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
-						sl = nl[0];
-						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
-						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
-						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
-					}
-					var el = document.getElementById(e.c);
-					if (el!==null && el) el.style.height = newh+"px";
-					el = document.getElementById(e.c+"_wrapper");
-					if (el!==null && el) {
-						el.style.height = newh+"px";
-						el.style.display = "block";
-					}
-				} catch(e){
-					console.log("Failure at Presize of Slider:" + e)
-				}
-			//});
-		  };</script>
+p {
+  margin-bottom: 1.5rem;
+  color: var(--color-gray-700);
+}
 
-</head>
-<body data-rsssl=1 class="home wp-singular page-template page-template-page-templates page-template-home1 page-template-page-templateshome1-php page page-id-22 wp-theme-tanda elementor-default elementor-kit-1399 elementor-page elementor-page-22">
+a {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
 
-    <!-- Preloader Start -->
-    <div id="site-preloader" class="site-preloader">
-        <div class="loader-wrap">
-            <div class="ring">
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Ends -->
+a:hover,
+a:focus {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
 
-    <!-- Start Header Top 
-    ============================================= -->
-    <div class="top-bar-area inc-pad bg-theme text-light">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-6 info">
-                    <ul>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i> Magmed Bldg, Office 102, 378 Braam Pretorius St, Magalieskruin, 0150, RSA                        </li>
-                        <li>
-                            <i class="fas fa-envelope-open"></i> <a href="mailto:sales%40ceeit.co.za">sales@ceeit.co.za</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 text-right item-flex">
-                    <div class="info">
-                        <ul>
-                            <li>
-                                <i class="fas fa-clock"></i> Office Hrs | Mon - Fri: 8:00 AM – 5:00 PM                            </li>
-                        </ul>
-                    </div>
-                    <div class="social">
-                        <ul>
-                            <li>
-                                <a href="https://www.facebook.com/CEEITSOLUTIONS">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/ceeitsolutions/">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class=""></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Header Top -->
+/* ──────────────────────────────────────────────── */
+/* Header & Navigation                              */
+/* ──────────────────────────────────────────────── */
 
+.navbar {
+  background-color: var(--color-gray-900) !important;
+  border-bottom: 1px solid var(--color-gray-800);
+  padding: 1rem 0;
+}
 
-    <!-- Header 
-    ============================================= -->
-    <header id="home">
+.navbar .navbar-brand img {
+  max-height: 54px;
+}
 
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-default active-border navbar-sticky bootsnav">
+.navbar-nav > li > a {
+  color: white !important;
+  font-weight: 500;
+  padding: 0.65rem 1.15rem !important;
+  transition: var(--transition);
+}
 
-            <div class="container">
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a.active,
+.navbar-nav > li.current-menu-item > a,
+.navbar-nav > li.current_page_item > a {
+  color: var(--color-accent) !important;
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+}
 
-                <!-- Start Atribute Navigation -->
-                <div class="attr-nav inc-border">
-                    <ul>
-                        <li class="contact">
-                            <i class="fas fa-phone"></i> 
-                            <p>Call us! <strong><a href="tel:GP%3A%20012%20940%202940%20%2F%20WC%3A%20021%20203%206272">GP: 012 940 2940 / WC: 021 203 6272</strong></p>
-                        </li>
-                    </ul>
-                </div>        
-                <!-- End Atribute Navigation -->
+/* Top bar */
+.top-bar-area {
+  background-color: var(--color-gray-800) !important;
+  color: var(--color-gray-300) !important;
+  font-size: 0.95rem;
+}
 
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="https://ceeit.co.za/">
-                        <img src="https://ceeit.co.za/wp-content/uploads/2025/10/Ceeit-RS-Transparent-2025.png" class="logo" alt="Logo">
-                    </a>
-                </div>
-                <!-- End Header Navigation -->
+.top-bar-area a {
+  color: white !important;
+}
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div id="navbar-menu" class="collapse navbar-collapse"><ul data-in="#" data-out="#" class="nav navbar-nav navbar-center" id="menu-main-menu-1"><li id="menu-item-790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-22 current_page_item menu-item-790 active"><a   title="Home" href="https://ceeit.co.za/">Home</a></li>
-<li id="menu-item-2979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2979"><a   title="About" href="https://ceeit.co.za/about-2/">About</a></li>
-<li id="menu-item-773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-773 dropdown"><a   title="Services" href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
-<ul class=" dropdown-menu" >
-	<li id="menu-item-2930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2930"><a   title="ERP and POS Systems" href="https://ceeit.co.za/erp-and-pos-systems/">ERP and POS Systems</a></li>
-	<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2929"><a   title="IT/POS Hardware and Consumables" href="https://ceeit.co.za/it-pos-hardware-and-consumables/">IT/POS Hardware and Consumables</a></li>
-	<li id="menu-item-2928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2928"><a   title="Barcode, Scanning  &amp; Labeling Systems" href="https://ceeit.co.za/barcode-scanning-labeling-systems/">Barcode, Scanning  &amp; Labeling Systems</a></li>
-	<li id="menu-item-2927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2927"><a   title="Implementation and Training" href="https://ceeit.co.za/implementation-and-training/">Implementation and Training</a></li>
-	<li id="menu-item-2926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2926"><a   title="Virtual Windows Servers" href="https://ceeit.co.za/virtual-windows-servers/">Virtual Windows Servers</a></li>
-	<li id="menu-item-2925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2925"><a   title="VOIP Cloud PABX" href="https://ceeit.co.za/voip-cloud-pabx/">VOIP Cloud PABX</a></li>
-	<li id="menu-item-2923" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2923"><a   title="Domain/Email Hosting" href="https://ceeit.co.za/domain-email-hosting/">Domain/Email Hosting</a></li>
-	<li id="menu-item-2924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2924"><a   title="Internet Connectivity" href="https://ceeit.co.za/internet-connectivity/">Internet Connectivity</a></li>
-</ul>
-</li>
-<li id="menu-item-2931" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2931"><a   title="Contact" href="https://ceeit.co.za/contact_us/">Contact</a></li>
-<li id="menu-item-3102" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3102"><a   title="Support" href="https://ceeit.freshdesk.com/support/home">Support</a></li>
-</ul></div>            </div>
+.top-bar-area a:hover {
+  color: var(--color-accent) !important;
+}
 
-        </nav>
-        <!-- End Navigation -->
+/* ──────────────────────────────────────────────── */
+/* Hero / Banner                                    */
+/* ──────────────────────────────────────────────── */
 
-    </header>
-    <!-- End Header -->
- 		<div data-elementor-type="wp-page" data-elementor-id="22" class="elementor elementor-22" data-elementor-post-type="page">
-						<section class="elementor-section elementor-top-section elementor-element elementor-element-d201244 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="d201244" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5188db4" data-id="5188db4" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-21b7214 elementor-widget elementor-widget-hero" data-id="21b7214" data-element_type="widget" data-e-type="widget" data-widget_type="hero.default">
-				<div class="elementor-widget-container">
-					
-       <!-- Start Banner 
-        ============================================= -->
-        <div class="banner-area auto-height text-color bg-gray inc-shape">
-            <div class="item">
-                <div class="container">
-                    <div class="row align-center">
-                                        
-                        <div class="col-lg-6">
-                            <div class="content">
-                                <h4 class="wow fadeInUp">Linking People </h4>
-                                <h2 class="wow fadeInDown">With Systems  <strong>through Structure</strong></h2>
-                                <p class="wow fadeInLeft">
-                                    Since 1999 - 25 Years of Service Excellence. We specialise in the implementation and support of IT Solutions, IQ Retail Point of Sale and Business Management Consulting                                </p>
-                                                            </div>
-                        </div>
-                        <div class="col-lg-6 thumb">
-                            <img decoding="async" class="wow fadeInUp" src="https://ceeit.co.za/wp-content/uploads/2024/08/25years-web-2.png" alt="Thumb">
-                        </div>
+.banner-area {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%) !important;
+  padding: 140px 0 110px !important;
+  position: relative;
+  overflow: hidden;
+}
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- End Banner -->
+.banner-area::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(59,130,246,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
 
-    				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-9b68ffd elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="9b68ffd" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b5ec8ed" data-id="b5ec8ed" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-359b403 elementor-widget elementor-widget-about" data-id="359b403" data-element_type="widget" data-e-type="widget" data-widget_type="about.default">
-				<div class="elementor-widget-container">
-					
-        <!-- Star About Area
-    ============================================= -->
-    <div class="about-area inc-shape default-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="thumb">
-                        <img decoding="async" src="https://ceeit.co.za/wp-content/uploads/2022/01/1.jpg" alt="Thumb">
-                        <img decoding="async" src="https://ceeit.co.za/wp-content/uploads/2022/01/2-1.jpg" alt="Thumb">
-                        <div class="overlay">
-                            <div class="content">
-                                <h4>25 years of Service Excellence</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 offset-lg-1 info">
-                    <h2>We Empower Small and Medium Businesses Across Southern Africa with Cutting-edge ICT Solutions</h2>
-                    <p>
-                        At CEEit (JCAF General Trading CC t/a CEEit Solutions), our vision is to empower small and medium businesses across Southern Africa with cutting-edge ICT solutions that were once reserved for larger corporations. 
+.banner-area h2 strong {
+  color: var(--color-primary);
+}
 
-Through our unwavering commitment to excellence, we aspire to revolutionize the business landscape by delivering premium enterprise-grade products and services to SMEs. 
- 
-                    </p>
-                    <ul>
-                                                <li>
-                            <div class="icon">
-                                <i class="flaticon-certification"></i>
-                            </div>
-                            <div class="info">
-                                <h4>Certified Company</h4>
-                                <p>
-                                    We are certified with the top IT and Connectivity companies in South Africa. Trusted By Many                                </p>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                    <div class="author">
-                        <div class="signature">
-                            <img decoding="async" src="https://ceeit.co.za/wp-content/uploads/2024/08/25-Years-Exellence.png" alt="signature">
-                        </div>
-                        <div class="intro">
-                            <h5>Since 1999</h5>
-                            <span>Celebrating 25 years of Service Excellence</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End About Area -->
+.banner-area .btn-theme {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+}
 
-				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-e98dff6 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="e98dff6" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2f93e45" data-id="2f93e45" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-c06db20 elementor-widget elementor-widget-choose" data-id="c06db20" data-element_type="widget" data-e-type="widget" data-widget_type="choose.default">
-				<div class="elementor-widget-container">
-					
-        <!-- Start Features 
-    ============================================= -->
-    <div class="features-area overflow-hidden bg-gray default-padding">
-        <!-- Fixed Shpae  -->
-        <div class="fixed-shape shape left bottom">
-            <img decoding="async" src="https://ceeit.co.za/wp-content/uploads/2022/01/3-1.png" alt="Shape">
-        </div>
-        <!-- End Fixed Shpae  -->
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-5 why-us">
-                    <h5>why choose us</h5>
-                    <h2>Tailored IT Solutions Designed Specifically for Your Business</h2>
-                    <p>
-                        With over 21 years in business, our team has grown in number and with experience which enables us to provide technical support of a superior calibre, ethical administration, financial, and procurement processes backed up by sound human resources management and integrated sales initiatives.                    </p>
-                                    </div>
-                <div class="col-lg-7 features-box text-center">
-                    <div class="row">
-                        
-                        <!-- Item Grid -->
-                        <div class="col-lg-6 col-md-6 item-grid">
-                            <!-- Single Item -->
-                            <div class="item">
-                                <i class="flaticon-cogwheel"></i>
-                                <h5><a href="#">21 Years Experience</a></h5>
-                                <p>
-                                     We have the expertise and know-how.                                 </p>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="item">
-                                <i class="flaticon-globe-grid"></i>
-                                <h5><a href="#">Technical Support</a></h5>
-                                <p>
-                                     With our knowledge and experience we can provide the best possible support.                                </p>
-                            </div>
-                            <!-- End Single Item -->
-                        </div>
-                        <!-- End Item Grid -->
+.banner-area .btn-theme:hover {
+  background-color: var(--color-primary-dark) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(30,64,175,0.28);
+}
 
-                        
-                        <!-- Item Grid -->
-                        <div class="col-lg-6 col-md-6 item-grid">
-                            <!-- Single Item -->
-                            <div class="item">
-                                <i class="flaticon-cloud-storage"></i>
-                                <h5><a href="#">Integrated Sales</a></h5>
-                                <p>
-                                     Seamlessly connecting every aspect of your business for success                                </p>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="item">
-                                <i class="flaticon-cloud-storage"></i>
-                                <h5><a href="#">Ethical</a></h5>
-                                <p>
-                                     Our principles guide every decision, ensuring fairness and integrity in every action                                </p>
-                            </div>
-                            <!-- End Single Item -->
-                        </div>
-                        <!-- End Item Grid -->
+/* ──────────────────────────────────────────────── */
+/* Buttons – global                                 */
+/* ──────────────────────────────────────────────── */
 
-                        
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <!-- End Features Area -->
-       
+.btn-theme,
+.btn.btn-theme,
+a.btn.btn-theme,
+.btn.btn-theme.effect {
+  background: var(--color-primary) !important;
+  color: white !important;
+  border-radius: var(--radius);
+  padding: 0.85rem 2rem;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
 
-    				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-f3ad936 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="f3ad936" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9c1ed2f" data-id="9c1ed2f" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-17ff9d7 elementor-widget elementor-widget-work" data-id="17ff9d7" data-element_type="widget" data-e-type="widget" data-widget_type="work.default">
-				<div class="elementor-widget-container">
-					
-        <!-- Start Work Process 
-    ============================================= -->
-    <div class="work-process-area overflow-hidden default-padding bottom-less">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h4>Our Process</h4>
-                        <h2>How we do things</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-full">
-            <div class="work-pro-items">
-                <div class="row">
-                                        <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="icon">
-                                    <i class="flaticon-select"></i>
-                                    <span>01</span>
-                                </div>
-                                <h5>Choose a Service</h5>
-                                <p>
-                                    Decide on which service you need us to assist you with.                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                                    <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="icon">
-                                    <i class="flaticon-video-call"></i>
-                                    <span>02</span>
-                                </div>
-                                <h5>Request a Meeting</h5>
-                                <p>
-                                    Once decided. Request a meeting. Either in person or online.                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                                    <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="icon">
-                                    <i class="flaticon-strategy"></i>
-                                    <span>03</span>
-                                </div>
-                                <h5>Receive Custom Solution</h5>
-                                <p>
-                                    Every business is different. We ensure you receive a tailored solution to your need.                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                                    <!-- Single Item -->
-                    <div class="single-item col-lg-3 col-md-6">
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="icon">
-                                    <i class="flaticon-help"></i>
-                                    <span>04</span>
-                                </div>
-                                <h5>Let’s Make it Happen</h5>
-                                <p>
-                                    Once you are happy with the plan, we will make it happen with our trained experts.                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Work Process Area -->
+.btn-theme:hover,
+.btn.btn-theme:hover,
+a.btn.btn-theme:hover {
+  background: var(--color-primary-dark) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(30,64,175,0.25);
+}
 
-    				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-7d434f8 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="7d434f8" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b0ae6ec" data-id="b0ae6ec" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-49d1cd0 elementor-widget elementor-widget-work_about" data-id="49d1cd0" data-element_type="widget" data-e-type="widget" data-widget_type="work_about.default">
-				<div class="elementor-widget-container">
-					
+/* ──────────────────────────────────────────────── */
+/* Cards & Items (services, features, process, etc) */
+/* ──────────────────────────────────────────────── */
 
-        <!-- Start Works About 
-    ============================================= -->
-    <div class="works-about-area overflow-hidden">
-        <div class="container">
-            <div class="works-about-items default-padding">
-                <div class="row align-center">
-                    <div class="col-lg-6 info">
-                        <h5>Happy Customers</h5>
-                        <h2>Trusted by many<br></h2>
-                        <p>
-                             At CEEIt, trust is the cornerstone of our journey. We take immense pride in being the choice of many, a testament to our unwavering commitment to excellence.
+.item,
+.single-item .item,
+.services-items .item,
+.features-box .item {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  overflow: hidden;
+}
 
-For years, we&#039;ve worked tirelessly to build a reputation that speaks for itself. Our dedication to quality, reliability, and customer satisfaction has earned us the trust of countless individuals and businesses alike.
+.item:hover,
+.single-item .item:hover,
+.services-items .item:hover,
+.features-box .item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+}
 
-When you choose CEEIT, you&#039;re not just choosing a product or service; you&#039;re choosing a partner you can rely on. Our track record of delivering exceptional results and going above and beyond expectations has made us the go-to choice for those who demand nothing but the best.
+.item .info h4 a,
+.services-items h4 a {
+  color: var(--color-gray-900);
+  transition: var(--transition);
+}
 
-Join the ranks of those who have put their trust in us, and experience the difference for yourself. At CEEIT, we&#039;re not just trusted by many – we&#039;re trusted by you.</p>
-                        <ul>
-                                                        <li>
-                                <h5>100% Client Satisfaction</h5>
-                            </li>
-                                                        <li>
-                                <h5>World Class Service</h5>
-                            </li>
-                                                    </ul>
-                                                <a href="https://ceeit.co.za/contact_us/" class="btn btn-theme effect btn-sm">Talk to a consultant</a>
-                                             </div>
-                    <div class="col-lg-6">
-                        <div class="thumb">
-                            <img decoding="async" src="https://ceeit.co.za/wp-content/uploads/2022/01/3.jpg" alt="Thumb">
-                            <div class="fun-fact">
-                                <div class="timer" data-to="1000" data-speed="5000">1000</div>
-                                <span class="medium">Completed Projects</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Works About Area -->
-       
+.item .info h4 a:hover,
+.services-items h4 a:hover {
+  color: var(--color-primary);
+}
 
-    				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-4320f43 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="4320f43" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c6f94df" data-id="c6f94df" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-99acb8a elementor-widget elementor-widget-services" data-id="99acb8a" data-element_type="widget" data-e-type="widget" data-widget_type="services.default">
-				<div class="elementor-widget-container">
-					
-       <!-- Start Services 
-    ============================================= -->
-    <div class="services-area carousel-shadow default-padding-top bg-cover">
-                <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h4 class="slide-up">Services</h4>
-                        <h2>What we do</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-                <div class="container">
-            <div class="services-items services-carousel owl-carousel owl-theme text-center">
+/* ──────────────────────────────────────────────── */
+/* Sections backgrounds                             */
+/* ──────────────────────────────────────────────── */
 
-            
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="icon">
-                        <i class="flaticon-strategy"></i>
-                    </div>
-                    <div class="info">
-                        <h4><a href="https://ceeit.co.za/erp-and-pos-systems/">POS &amp; ERP Systems</a></h4>
-                        <p>
-                            Streamline your business processes  with our customisable solutions are tailored to your industry&#039;s requirements.                        </p>
-                                                <a href="https://ceeit.co.za/erp-and-pos-systems/"><i class="fas fa-angle-right"></i></a>
-                                            </div>
-                </div>
-                <!-- End Single Item -->
-                
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="icon">
-                        <i class="flaticon-strategy"></i>
-                    </div>
-                    <div class="info">
-                        <h4><a href="https://ceeit.co.za/it-pos-hardware-and-consumables/">IT/POS Hardware &amp; Consumables</a></h4>
-                        <p>
-                            Experience superior quality with our range of IT and POS hardware solutions.                        </p>
-                                                <a href="https://ceeit.co.za/it-pos-hardware-and-consumables/"><i class="fas fa-angle-right"></i></a>
-                                            </div>
-                </div>
-                <!-- End Single Item -->
-                
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="icon">
-                        <i class="flaticon-strategy"></i>
-                    </div>
-                    <div class="info">
-                        <h4><a href="https://ceeit.co.za/barcode-scanning-labeling-systems/">Barcode, Scanning  &amp; Labeling Systems</a></h4>
-                        <p>
-                            Manage inventory and track products with our barcode and labeling systems                        </p>
-                                                <a href="https://ceeit.co.za/barcode-scanning-labeling-systems/"><i class="fas fa-angle-right"></i></a>
-                                            </div>
-                </div>
-                <!-- End Single Item -->
-                
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="icon">
-                        <i class="flaticon-firewall"></i>
-                    </div>
-                    <div class="info">
-                        <h4><a href="https://ceeit.co.za/implementation-and-training/">Implementation &amp; Training</a></h4>
-                        <p>
-                            Our experts ensures seamless implementation of our solutions into your existing infrastructure                        </p>
-                                                <a href="https://ceeit.co.za/implementation-and-training/"><i class="fas fa-angle-right"></i></a>
-                                            </div>
-                </div>
-                <!-- End Single Item -->
-                
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="icon">
-                        <i class="flaticon-interview"></i>
-                    </div>
-                    <div class="info">
-                        <h4><a href="https://ceeit.co.za/virtual-windows-servers/">Virtual Windows Servers</a></h4>
-                        <p>
-                            Experience the power of flexibility and scalability with our secure Virtual Windows Servers                        </p>
-                                                <a href="https://ceeit.co.za/virtual-windows-servers/"><i class="fas fa-angle-right"></i></a>
-                                            </div>
-                </div>
-                <!-- End Single Item -->
-                
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="icon">
-                        <i class="flaticon-interview"></i>
-                    </div>
-                    <div class="info">
-                        <h4><a href="https://ceeit.co.za/voip-cloud-pabx/">VOIP Cloud PABX</a></h4>
-                        <p>
-                            Enjoy crystal-clear voice communication and reducing communication costs with our VOIP Cloud PABX services                        </p>
-                                                <a href="https://ceeit.co.za/voip-cloud-pabx/"><i class="fas fa-angle-right"></i></a>
-                                            </div>
-                </div>
-                <!-- End Single Item -->
-                
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="icon">
-                        <i class="flaticon-interview"></i>
-                    </div>
-                    <div class="info">
-                        <h4><a href="https://ceeit.co.za/cyber-security/">Cloud Backup, Filespace, and Security</a></h4>
-                        <p>
-                            Safeguard your valuable data with our robust cloud backup and storage solutions                        </p>
-                                                <a href="https://ceeit.co.za/cyber-security/"><i class="fas fa-angle-right"></i></a>
-                                            </div>
-                </div>
-                <!-- End Single Item -->
-                
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="icon">
-                        <i class="flaticon-interview"></i>
-                    </div>
-                    <div class="info">
-                        <h4><a href="https://ceeit.co.za/internet-connectivity/">Internet Connectivity</a></h4>
-                        <p>
-                            We offer high-speed, stable internet solutions tailored to your bandwidth requirements                         </p>
-                                                <a href="https://ceeit.co.za/internet-connectivity/"><i class="fas fa-angle-right"></i></a>
-                                            </div>
-                </div>
-                <!-- End Single Item -->
-                
-                <!-- Single Item -->
-                <div class="item">
-                    <div class="icon">
-                        <i class="flaticon-interview"></i>
-                    </div>
-                    <div class="info">
-                        <h4><a href="https://ceeit.co.za/domain-email-hosting/">Domain/Email Hosting</a></h4>
-                        <p>
-                            Establish your online presence with our reliable, secure and accessible domain and email hosting services                        </p>
-                                                <a href="https://ceeit.co.za/domain-email-hosting/"><i class="fas fa-angle-right"></i></a>
-                                            </div>
-                </div>
-                <!-- End Single Item -->
-                
-            </div>
-        </div>
-    </div>
- 				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-3001f5f elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="3001f5f" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-90d2834" data-id="90d2834" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-4b76f5d elementor-widget elementor-widget-counter" data-id="4b76f5d" data-element_type="widget" data-e-type="widget" data-widget_type="counter.default">
-				<div class="elementor-widget-container">
-					
-        <!-- Start Fun Factor Area
-    ============================================= -->
-    <div class="fun-factor-area overflow-hidden">
-        <div class="container">
-            <div class="fun-fact-items default-padding">
-                <div class="row">
+.bg-gray,
+.bg-cover:not(.banner-area) {
+  background-color: var(--color-bg-light) !important;
+}
 
-         
-        <div class="col-lg-3 col-md-6 item">
-        <div class="fun-fact">
-            <div class="icon">
-                 <i class="flaticon-medal"></i>
-             </div>
-             <div class="info">
-                <div class="timer" data-to="800" data-speed="5000">800</div>
-                <span class="medium">Happy Clients</span>
-             </div>
-        </div>
-    </div>
+/* ──────────────────────────────────────────────── */
+/* Footer                                           */
+/* ──────────────────────────────────────────────── */
 
-    
-        <div class="col-lg-3 col-md-6 item">
-        <div class="fun-fact">
-            <div class="icon">
-                 <i class="flaticon-help"></i>
-             </div>
-             <div class="info">
-                <div class="timer" data-to="2860" data-speed="5000">2860</div>
-                <span class="medium">Finished Project</span>
-             </div>
-        </div>
-    </div>
+footer.bg-dark {
+  background-color: var(--color-gray-900) !important;
+  border-top: 1px solid var(--color-gray-800);
+}
 
-    
-        <div class="col-lg-3 col-md-6 item">
-        <div class="fun-fact">
-            <div class="icon">
-                 <i class="flaticon-customer-service"></i>
-             </div>
-             <div class="info">
-                <div class="timer" data-to="6" data-speed="5000">6</div>
-                <span class="medium">Skilled Experts</span>
-             </div>
-        </div>
-    </div>
+footer .widget-title {
+  color: white;
+  font-weight: 700;
+}
 
-    
-        <div class="col-lg-3 col-md-6 item">
-        <div class="fun-fact">
-            <div class="icon">
-                 <i class="flaticon-backup"></i>
-             </div>
-             <div class="info">
-                <div class="timer" data-to="1200" data-speed="5000">1200</div>
-                <span class="medium">Media Posts</span>
-             </div>
-        </div>
-    </div>
+footer a,
+footer p,
+footer li,
+footer .info {
+  color: var(--color-gray-300) !important;
+}
 
-    
-    </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Fun Factor Area -->
+footer a:hover {
+  color: var(--color-accent) !important;
+}
 
-    				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-54bcfb1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="54bcfb1" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a6d8fdd" data-id="a6d8fdd" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-d9dc764 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="d9dc764" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-icon-box-wrapper">
+/* ──────────────────────────────────────────────── */
+/* Fun facts / Counters                             */
+/* ──────────────────────────────────────────────── */
 
-						<div class="elementor-icon-box-icon">
-				<span  class="elementor-icon">
-				<svg aria-hidden="true" class="e-font-icon-svg e-far-handshake" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z"></path></svg>				</span>
-			</div>
-			
-						<div class="elementor-icon-box-content">
+.fun-fact .timer {
+  color: var(--color-primary);
+  font-weight: 800;
+}
 
-									<h3 class="elementor-icon-box-title">
-						<span  >
-							CEEIT SOLUTIONS - YOUR TRUSTED PARTNER						</span>
-					</h3>
-				
-									<p class="elementor-icon-box-description">
-						We believe in partnering with businesses for long-term success. Our team of experts is dedicated to understanding your unique challenges and delivering tailored solutions that meet your specific needs. With a focus on innovation, reliability, and customer satisfaction, we're here to empower your business growth.
+.fun-fact .medium {
+  color: var(--color-gray-600);
+}
 
-Contact us today to embark on a journey of technological transformation. 
-Your success is our priority.
-					</p>
-				
-			</div>
-			
-		</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-2108f01 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="2108f01" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-75248c5" data-id="75248c5" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-a7a7b3a elementor-widget elementor-widget-faq" data-id="a7a7b3a" data-element_type="widget" data-e-type="widget" data-widget_type="faq.default">
-				<div class="elementor-widget-container">
-					
-        <!-- Start Faq 
-    ============================================= -->
-    <div class="faq-area default-padding bg-gray">
-        <div class="container">
-            <div class="faq-items">
-                <div class="row">
+/* ──────────────────────────────────────────────── */
+/* Mobile adjustments                               */
+/* ──────────────────────────────────────────────── */
 
-                    <div class="col-lg-5 info">
-                        <h5>faq</h5>
-                        <h2>Most common question about our services</h2>
-                        <a href="" class="btn btn-theme effect btn-md"></a>
-                    </div>
-
-                    <div class="col-lg-7">
-                        <div class="faq-content">
-                            <div class="accordion" id="accordionExample">
-                                            <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h4 class="mb-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Are you certified?                        </h4>
-                    </div>
-
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <p>
-                                We are certified installers and service providers of IQ Retail, Palladium, Irontree, Commvault, Frogfoot, Openserve, Metrofibre, Dell, Lenovo                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                        <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h4 class="mb-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                            What is the difference between managed IT services and break-fix services?                        </h4>
-                    </div>
-
-                    <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <p>
-                                Managed IT services involve proactive, continuous support where a provider monitors and maintains your IT infrastructure for a fixed fee. They focus on preventing issues and offer a long-term partnership. In contrast, break-fix services are reactive, involving payment only when issues arise, without ongoing monitoring or commitment.                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                        <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h4 class="mb-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                            What is cloud computing, and how can it benefit my organization?                        </h4>
-                    </div>
-
-                    <div id="collapseThree" class="collapse " aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <p>
-                                Cloud computing is a technology that enables organizations to access and utilize computing resources (like servers, storage, databases, networking, software, analytics, and more) over the internet on a pay-as-you-go basis. This approach offers several benefits, including cost-efficiency, scalability, flexibility, and the ability to access resources from anywhere with an internet connection. It can benefit your organization by reducing infrastructure costs, improving agility, enabling remote work, and allowing you to focus on core business activities while the cloud provider handles IT infrastructure management and maintenance.                            </p>
-                        </div>
-                    </div>
-                </div>
-
-        
-                      </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Faq Area -->
-
-    				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-1b447fe elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="1b447fe" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ebef870" data-id="ebef870" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-ef90fa3 elementor-widget elementor-widget-blog" data-id="ef90fa3" data-element_type="widget" data-e-type="widget" data-widget_type="blog.default">
-				<div class="elementor-widget-container">
-					
-        <!-- Start Blog 
-    ============================================= -->
-    <div class="blog-area content-less default-padding bottom-less">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                         <h4>POPULAR NEWS</h4>
-                        <h2>Read our latest article</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="blog-items">
-                <div class="row"> 
-
-                     
-<div class="col-lg-4 col-md-6 single-item">
-    <div class="item wow fadeInUp">
-        <div class="thumb">
-            <a href="https://ceeit.co.za/consulted-admitting-is-power-acuteness/">
-                <img fetchpriority="high" decoding="async" width="600" height="400" src="https://ceeit.co.za/wp-content/uploads/2021/01/blog1-600x400.jpeg" class="attachment-tanda-blog-sidebar size-tanda-blog-sidebar wp-post-image" alt="" srcset="https://ceeit.co.za/wp-content/uploads/2021/01/blog1-600x400.jpeg 600w, https://ceeit.co.za/wp-content/uploads/2021/01/blog1-300x200.jpeg 300w, https://ceeit.co.za/wp-content/uploads/2021/01/blog1-1024x683.jpeg 1024w, https://ceeit.co.za/wp-content/uploads/2021/01/blog1-768x512.jpeg 768w, https://ceeit.co.za/wp-content/uploads/2021/01/blog1-350x233.jpeg 350w, https://ceeit.co.za/wp-content/uploads/2021/01/blog1-540x360.jpeg 540w, https://ceeit.co.za/wp-content/uploads/2021/01/blog1-750x500.jpeg 750w, https://ceeit.co.za/wp-content/uploads/2021/01/blog1.jpeg 1500w" sizes="(max-width: 600px) 100vw, 600px" />            </a>
-        </div>
-        <div class="info">
-            <div class="meta">
-                <ul>
-                    <li><i class="fas fa-calendar-alt"></i> January 20 2021</li>
-                    <li><i class="fas fa-user"></i>admin</li>
-                </ul>
-            </div>
-            <h4>
-                <a href="https://ceeit.co.za/consulted-admitting-is-power-acuteness/">Safeguard Your Data with Cloud Backups: Discover the FileSpace Advantage</a>
-            </h4>
-                <p>Wooded ladies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode.</p>
-            <a class="btn-simple" href="https://ceeit.co.za/consulted-admitting-is-power-acuteness/">Read More <i class="fas fa-angle-right"></i></a>
-        </div>
-    </div>
-</div>
-    
-
-   </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Blog Area -->
-
-    				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-22e5e6b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="22e5e6b" data-element_type="section" data-e-type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-556010b" data-id="556010b" data-element_type="column" data-e-type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-8da39a8 elementor-widget elementor-widget-html" data-id="8da39a8" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-				<div class="elementor-widget-container">
-					<script
-src='//fw-cdn.com/10565785/3449857.js'
-chat='true'
-widgetId='47a50b9a-a9f5-4eea-bb0c-967cbc035db9'>
-</script>				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				</div>
-		
- <!-- Start Footer 
-    ============================================= -->
-    <footer class="bg-dark text-light">
-        <!-- Fixed Shape -->
-        <div class="fixed-shape">
-            <img src="https://ceeit.co.za/wp-content/themes/tanda/img/map.svg" alt="Shape">
-        </div>
-        <!-- Fixed Shape -->
-        <div class="container">
-            <div class="f-items default-padding">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 item">
-                        <div class="f-item about">
-                            <img src="https://ceeit.co.za/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-24-at-18.00.52.jpeg" alt="Logo">
-                            <p>
-                                Embark on a journey of technological transformation with CEEIT. Your success is our priority.                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-2 col-md-6 item">
-                        <div class="f-item link">
-                            <h4 class="widget-title">Company</h4>
-                            <div class="menu-company-container"><ul id="menu-company" class="menu"><li id="menu-item-2989" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2989"><a href="https://ceeit.co.za/about-2/">About</a></li>
-<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2972"><a href="https://ceeit.co.za/privacy-policy/">Privacy Policy</a></li>
-</ul></div>                        </div>
-                    </div>
-                    
-                    <div class="col-lg-2 col-md-6 item">
-                        <div class="f-item link">
-                            <h4 class="widget-title">Solutions</h4>
-                            <div class="menu-solutions-container"><ul id="menu-solutions" class="menu"><li id="menu-item-2958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2958"><a href="https://ceeit.co.za/domain-email-hosting/">Domain/Email Hosting</a></li>
-<li id="menu-item-2959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2959"><a href="https://ceeit.co.za/internet-connectivity/">Internet Connectivity</a></li>
-<li id="menu-item-2960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2960"><a href="https://ceeit.co.za/voip-cloud-pabx/">VOIP Cloud PABX</a></li>
-<li id="menu-item-2961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2961"><a href="https://ceeit.co.za/virtual-windows-servers/">Virtual Windows Servers</a></li>
-<li id="menu-item-2962" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2962"><a href="https://ceeit.co.za/implementation-and-training/">Implementation and Training</a></li>
-<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963"><a href="https://ceeit.co.za/barcode-scanning-labeling-systems/">Barcode, Scanning  &amp; Labeling Systems</a></li>
-<li id="menu-item-2964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2964"><a href="https://ceeit.co.za/it-pos-hardware-and-consumables/">IT/POS Hardware and Consumables</a></li>
-<li id="menu-item-2965" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2965"><a href="https://ceeit.co.za/erp-and-pos-systems/">ERP and POS Systems</a></li>
-</ul></div>                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 item">
-                    <div class="f-item">
-                        <h4 class="widget-title">Contact Info</h4>
-                        <div class="address">
-                            <ul>
-                                <li>
-                                    <div class="icon">
-                                        <i class="flaticon-pin"></i>
-                                    </div>
-                                    <div class="info">
-                                        Magmed Building, Office 101, 378 Braam Pretorius St, Magalieskruin, 0150, South Africa                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="flaticon-email-1"></i>
-                                    </div>
-                                    <div class="info">
-                                        <a href="mailto:sales%40ceeit.co.za">sales@ceeit.co.za</a> <br> <a href="mailto:"></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="flaticon-telephone"></i>
-                                    </div>
-                                    <div class="info">
-                                        <a href="tel:Gauteng%3A%20012%20940%202940%0D%0A%0D%0A%0D%0A">Gauteng: 012 940 2940
-
-
-</a> <br> <a href="tel:Western%20Cape%3A%20021%20203%206272">Western Cape: 021 203 6272</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Start Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Copyright 2023. CEEIT. Website designed and maintained by BrightCo</p>
-                    </div>
-                    <div class="col-md-6 text-right link">
-                                            </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Footer Bottom -->
-    </footer>
-    <!-- End Footer -->
-
-		<script>
-			window.RS_MODULES = window.RS_MODULES || {};
-			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
-			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
-			window.RS_MODULES.defered = true;
-			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
-			window.RS_MODULES.type = 'compiled';
-		</script>
-		<script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/tanda/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-</script>
-			<script>
-				const lazyloadRunObserver = () => {
-					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
-					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
-						entries.forEach( ( entry ) => {
-							if ( entry.isIntersecting ) {
-								let lazyloadBackground = entry.target;
-								if( lazyloadBackground ) {
-									lazyloadBackground.classList.add( 'e-lazyloaded' );
-								}
-								lazyloadBackgroundObserver.unobserve( entry.target );
-							}
-						});
-					}, { rootMargin: '200px 0px 200px 0px' } );
-					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
-						lazyloadBackgroundObserver.observe( lazyloadBackground );
-					} );
-				};
-				const events = [
-					'DOMContentLoaded',
-					'elementor/lazyload/observe',
-				];
-				events.forEach( ( event ) => {
-					document.addEventListener( event, lazyloadRunObserver );
-				} );
-			</script>
-					<div 
-			class="qlwapp"
-			style="--qlwapp-scheme-font-family:inherit;--qlwapp-scheme-font-size:18px;--qlwapp-scheme-icon-size:60px;--qlwapp-scheme-icon-font-size:24px;--qlwapp-scheme-box-max-height:400px;--qlwapp-scheme-box-message-word-break:break-all;--qlwapp-button-notification-bubble-animation:none;"
-			data-contacts="[{&quot;id&quot;:0,&quot;bot_id&quot;:&quot;&quot;,&quot;order&quot;:1,&quot;active&quot;:1,&quot;chat&quot;:1,&quot;avatar&quot;:&quot;https:\/\/www.gravatar.com\/avatar\/00000000000000000000000000000000&quot;,&quot;type&quot;:&quot;phone&quot;,&quot;phone&quot;:&quot;27832682789&quot;,&quot;group&quot;:&quot;https:\/\/chat.whatsapp.com\/EQuPUtcPzEdIZVlT8JyyNw&quot;,&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;label&quot;:&quot;Support&quot;,&quot;message&quot;:&quot;Please contact me regarding your services offered?&quot;,&quot;timefrom&quot;:&quot;00:00&quot;,&quot;timeto&quot;:&quot;00:00&quot;,&quot;timezone&quot;:&quot;UTC+2&quot;,&quot;visibility&quot;:&quot;readonly&quot;,&quot;timedays&quot;:[],&quot;display&quot;:{&quot;entries&quot;:{&quot;post&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;page&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;taxonomies&quot;:{&quot;category&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;post_tag&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;target&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;devices&quot;:&quot;all&quot;}}]"
-			data-display="{&quot;devices&quot;:&quot;all&quot;,&quot;entries&quot;:{&quot;post&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;page&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;taxonomies&quot;:{&quot;category&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;post_tag&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;target&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}}"
-			data-button="{&quot;layout&quot;:&quot;button&quot;,&quot;box&quot;:&quot;no&quot;,&quot;position&quot;:&quot;middle-right&quot;,&quot;text&quot;:&quot;Whatsapp Us!&quot;,&quot;message&quot;:&quot;Please contact me regarding your services offered?&quot;,&quot;icon&quot;:&quot;qlwapp-whatsapp-icon&quot;,&quot;type&quot;:&quot;phone&quot;,&quot;phone&quot;:&quot;27832682789&quot;,&quot;group&quot;:&quot;https:\/\/chat.whatsapp.com\/EQuPUtcPzEdIZVlT8JyyNw&quot;,&quot;developer&quot;:&quot;no&quot;,&quot;rounded&quot;:&quot;yes&quot;,&quot;timefrom&quot;:&quot;00:00&quot;,&quot;timeto&quot;:&quot;00:00&quot;,&quot;timedays&quot;:[],&quot;timezone&quot;:&quot;UTC+2&quot;,&quot;visibility&quot;:&quot;readonly&quot;,&quot;animation_name&quot;:&quot;&quot;,&quot;animation_delay&quot;:&quot;&quot;,&quot;whatsapp_link_type&quot;:&quot;web&quot;,&quot;notification_bubble&quot;:&quot;none&quot;,&quot;notification_bubble_animation&quot;:&quot;none&quot;}"
-			data-box="{&quot;enable&quot;:&quot;yes&quot;,&quot;auto_open&quot;:&quot;no&quot;,&quot;auto_delay_open&quot;:1000,&quot;lazy_load&quot;:&quot;no&quot;,&quot;allow_outside_close&quot;:&quot;no&quot;,&quot;header&quot;:&quot;\n\t\t\t\t\t\t\t\t&lt;p style=\&quot;line-height: 1;text-align: start\&quot;&gt;&lt;span style=\&quot;font-size: 12px;vertical-align: bottom;letter-spacing: -0.2px;opacity: 0.8;margin: 5px 0 0 1px\&quot;&gt;Powered by&lt;\/span&gt;&lt;\/p&gt;\n\t\t\t\t\t\t\t\t&lt;p style=\&quot;line-height: 1;text-align: start\&quot;&gt;&lt;a style=\&quot;font-size: 24px;line-height: 34px;font-weight: bold;text-decoration: none;color: white\&quot; href=\&quot;https:\/\/quadlayers.com\/products\/whatsapp-chat\/?utm_source=qlwapp_plugin&amp;utm_medium=header&amp;utm_campaign=social-chat\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener\&quot;&gt;Social Chat&lt;\/a&gt;&lt;\/p&gt;&quot;,&quot;footer&quot;:&quot;&lt;p style=\&quot;text-align: start;\&quot;&gt;Need help? Our team is just a message away&lt;\/p&gt;&quot;,&quot;response&quot;:&quot;Write a response&quot;,&quot;consent_message&quot;:&quot;I accept cookies and privacy policy.&quot;,&quot;consent_enabled&quot;:&quot;no&quot;}"
-			data-scheme="{&quot;font_family&quot;:&quot;inherit&quot;,&quot;font_size&quot;:&quot;18&quot;,&quot;icon_size&quot;:&quot;60&quot;,&quot;icon_font_size&quot;:&quot;24&quot;,&quot;box_max_height&quot;:&quot;400&quot;,&quot;brand&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;link&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;,&quot;label&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;contact_role_color&quot;:&quot;&quot;,&quot;contact_name_color&quot;:&quot;&quot;,&quot;contact_availability_color&quot;:&quot;&quot;,&quot;box_message_word_break&quot;:&quot;break-all&quot;}"
-		>
-					</div>
-		<link rel='stylesheet' id='qlwapp-frontend-css' href='https://ceeit.co.za/wp-content/plugins/wp-whatsapp-chat/build/frontend/css/style.css?ver=8.3.0' media='all' />
-<link rel='stylesheet' id='rs-plugin-settings-css' href='https://ceeit.co.za/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.14' media='all' />
-<style id='rs-plugin-settings-inline-css'>
-#rs-demo-id {}
-/*# sourceURL=rs-plugin-settings-inline-css */
-</style>
-<script src="https://ceeit.co.za/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
-<script src="https://ceeit.co.za/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
-<script id="wp-i18n-js-after">
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-//# sourceURL=wp-i18n-js-after
-</script>
-<script src="https://ceeit.co.za/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.5" id="swv-js"></script>
-<script id="contact-form-7-js-before">
-var wpcf7 = {
-    "api": {
-        "root": "https:\/\/ceeit.co.za\/wp-json\/",
-        "namespace": "contact-form-7\/v1"
-    }
-};
-//# sourceURL=contact-form-7-js-before
-</script>
-<script src="https://ceeit.co.za/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.5" id="contact-form-7-js"></script>
-<script src="https://ceeit.co.za/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.14" defer async id="tp-tools-js"></script>
-<script src="https://ceeit.co.za/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.14" defer async id="revmin-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/popper.min.js?ver=6.9.1" id="popper-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/bootstrap.min.js?ver=6.9.1" id="bootstrap-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/equal-height.min.js?ver=6.9.1" id="equal-height-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/jquery.appear.js?ver=6.9.1" id="jquery-appear-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/jquery.easing.min.js?ver=6.9.1" id="jquery-easing-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/jquery.magnific-popup.min.js?ver=6.9.1" id="magnific-popup-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/modernizr.custom.13711.js?ver=6.9.1" id="modernizr-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/owl.carousel.min.js?ver=6.9.1" id="owl-carousel-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/wow.min.js?ver=6.9.1" id="wow-min-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/progress-bar.min.js?ver=6.9.1" id="progress-bar-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/isotope.pkgd.min.js?ver=6.9.1" id="isotope-js"></script>
-<script src="https://ceeit.co.za/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/count-to.js?ver=6.9.1" id="count-to-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/YTPlayer.min.js?ver=6.9.1" id="ytplayer-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/jquery.nice-select.min.js?ver=6.9.1" id="jquery-nice-select-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/bootsnav.js?ver=6.9.1" id="bootsnav-js"></script>
-<script src="https://ceeit.co.za/wp-content/themes/tanda/js/main.js?ver=6.9.1" id="tanda-main-js"></script>
-<script src="https://ceeit.co.za/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.35.6" id="elementor-webpack-runtime-js"></script>
-<script src="https://ceeit.co.za/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.35.6" id="elementor-frontend-modules-js"></script>
-<script src="https://ceeit.co.za/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
-<script id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Tap to select the previous period","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.35.6","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"theme_builder_v2":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_editor_one":true,"import-export-customization":true,"page-transitions":true,"notes":true,"loop":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/ceeit.co.za\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/ceeit.co.za\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/ceeit.co.za\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"0680817c22"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":22,"title":"CEEIT%20Solutions%20%E2%80%93%20Solutions","excerpt":"","featuredImage":false}};
-//# sourceURL=elementor-frontend-js-before
-</script>
-<script src="https://ceeit.co.za/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.35.6" id="elementor-frontend-js"></script>
-<script src="https://ceeit.co.za/wp-content/plugins/tanda-core/assets/js/main.js?ver=6.9.1" id="main-js"></script>
-<script src="https://ceeit.co.za/wp-includes/js/dist/vendor/react.min.js?ver=18.3.1.1" id="react-js"></script>
-<script src="https://ceeit.co.za/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1" id="react-dom-js"></script>
-<script src="https://ceeit.co.za/wp-includes/js/dist/escape-html.min.js?ver=6561a406d2d232a6fbd2" id="wp-escape-html-js"></script>
-<script src="https://ceeit.co.za/wp-includes/js/dist/element.min.js?ver=6a582b0c827fa25df3dd" id="wp-element-js"></script>
-<script src="https://ceeit.co.za/wp-content/plugins/wp-whatsapp-chat/build/frontend/js/index.js?ver=d5b77a840871431c1718" id="qlwapp-frontend-js"></script>
-<script src="https://ceeit.co.za/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.15.1" id="elementor-pro-webpack-runtime-js"></script>
-<script id="elementor-pro-frontend-js-before">
-var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/ceeit.co.za\/wp-admin\/admin-ajax.php","nonce":"869c1d2e10","urls":{"assets":"https:\/\/ceeit.co.za\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/ceeit.co.za\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_ZA","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/ceeit.co.za\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
-//# sourceURL=elementor-pro-frontend-js-before
-</script>
-<script src="https://ceeit.co.za/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.15.1" id="elementor-pro-frontend-js"></script>
-<script src="https://ceeit.co.za/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.15.1" id="pro-preloaded-elements-handlers-js"></script>
-<script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://ceeit.co.za/wp-includes/js/wp-emoji-release.min.js?ver=6.9.1"}}
-</script>
-<script type="module">
-/*! This file is auto-generated */
-const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
-//# sourceURL=https://ceeit.co.za/wp-includes/js/wp-emoji-loader.min.js
-</script>
-
-</body>
-</html>
+@media (max-width: 991px) {
+  .banner-area {
+    padding: 100px 0 80px !important;
+  }
+  
+  .navbar-collapse {
+    background: var(--color-gray-900);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    margin-top: 1rem;
+  }
+}
