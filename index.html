@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CEEIT Solutions | Enterprise ICT, ERP & HIOPOS Gold Partner</title>
+    <title>CEEIT Solutions | Enterprise ICT & Christian Integrity in Tech</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://ceeit.co.za/wp-content/themes/tanda/css/bootstrap.min.css'>
@@ -17,151 +17,79 @@
             --hiopos-red: #e30613;
             --gold: #d4af37;
             --light-bg: #f8fbff;
-            --glass: rgba(255, 255, 255, 0.95);
+            --white: #ffffff;
         }
 
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            color: #2d3436; 
-            overflow-x: hidden;
-            background-color: var(--white);
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #2d3436; }
+
+        /* Smaller, Elegant Logo */
+        .navbar-brand img { height: 45px !important; transition: 0.3s; }
+        .navbar-enterprise { background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); padding: 10px 0; border-bottom: 1px solid #eee; }
+
+        /* Mega Dropdown logic */
+        .nav-item.dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
+        .dropdown-menu { border: none; box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-radius: 12px; padding: 20px; }
+
+        /* Hero & Sectioning */
+        .hero-premium { padding: 180px 0 100px; background: linear-gradient(135deg, #fff 0%, #f0f4f8 100%); }
+        .hero-title { font-size: 4rem; font-weight: 800; color: var(--navy); line-height: 1.1; }
+
+        /* About Us & Values */
+        .values-box { border-left: 3px solid var(--gold); padding-left: 25px; margin: 40px 0; }
+
+        /* Projects & Professionals */
+        .project-card { border-radius: 20px; overflow: hidden; position: relative; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .project-overlay { background: linear-gradient(to top, var(--navy), transparent); color: white; padding: 20px; }
+
+        /* Services Grid Upgrade */
+        .service-list-item { padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+        .service-list-item i { color: var(--blue); margin-right: 15px; font-size: 0.9rem; }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
+            background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center;
+            font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 1000; display: flex; align-items: center; justify-content: center;
         }
 
-        /* Million Dollar Navbar */
-        .navbar-enterprise {
-            background: var(--glass);
-            backdrop-filter: blur(15px);
-            padding: 20px 0;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
+        /* Newsletter */
+        .newsletter-section { background: var(--navy); color: white; padding: 80px 0; border-radius: 40px; margin: 60px 0; }
         
-        .nav-link { 
-            font-weight: 700; 
-            color: var(--navy) !important; 
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            margin: 0 10px;
-        }
+        .btn-gold { background: var(--gold); color: var(--navy); font-weight: 800; border: none; border-radius: 50px; padding: 12px 30px; }
 
-        /* Hero Section with Depth */
-        .hero-premium {
-            padding: 240px 0 160px;
-            background: radial-gradient(circle at 80% 20%, rgba(0, 86, 179, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
-            position: relative;
-        }
-
-        .hero-title { 
-            font-size: 5rem; 
-            font-weight: 800; 
-            line-height: 1; 
-            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Floating Partner Bar */
-        .partner-ribbon {
-            background: white;
-            padding: 30px 0;
-            box-shadow: 0 10px 50px rgba(0,0,0,0.05);
-            border-radius: 20px;
-            margin-top: -50px;
-            position: relative;
-            z-index: 10;
-        }
-
-        /* Service Cards: The "Glass" Look */
-        .premium-card {
-            border: none;
-            background: white;
-            padding: 45px;
-            border-radius: 30px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.03);
-            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
-            height: 100%;
-            border: 1px solid #f0f0f0;
-        }
-
-        .premium-card:hover {
-            transform: translateY(-20px);
-            box-shadow: 0 40px 90px rgba(0,31,63,0.1);
-            border-color: var(--blue);
-        }
-
-        .icon-circle {
-            width: 80px; height: 80px;
-            background: var(--light-bg);
-            border-radius: 20px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2rem; color: var(--blue);
-            margin-bottom: 30px;
-        }
-
-        /* HIOPOS Cinematic Section */
-        .hiopos-cinema {
-            background: #1a1a1a;
-            color: white;
-            border-radius: 50px;
-            padding: 100px;
-            position: relative;
-            overflow: hidden;
-            margin: 100px 0;
-        }
-
-        .hiopos-cinema::before {
-            content: "";
-            position: absolute;
-            top: -50%; right: -20%;
-            width: 800px; height: 800px;
-            background: radial-gradient(circle, rgba(227, 6, 19, 0.15) 0%, transparent 70%);
-        }
-
-        /* Million Dollar CTAs */
-        .btn-premium {
-            background: var(--navy);
-            color: white !important;
-            padding: 20px 45px;
-            border-radius: 100px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.4s;
-            box-shadow: 0 15px 30px rgba(0,21,41,0.2);
-        }
-
-        .btn-premium:hover {
-            background: var(--hiopos-red);
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(227,6,19,0.3);
-        }
-
-        .floating-badge {
-            background: var(--gold);
-            color: var(--navy);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 800;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
+        /* Social Icons */
+        .social-link { width: 40px; height: 40px; background: rgba(255,255,255,0.1); display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: white; transition: 0.3s; }
+        .social-link:hover { background: var(--blue); color: white; transform: translateY(-3px); }
     </style>
 </head>
 <body>
+
+    <a href="https://wa.me/27622037170" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <nav class="navbar navbar-fixed-top navbar-enterprise">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#"><img src="https://ceeit.co.za/wp-content/uploads/2025/10/Ceeit-RS-Transparent-2025.png" alt="CEEIT"></a>
             </div>
-            <div class="collapse navbar-collapse">
+            <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" class="nav-link">Solutions</a></li>
-                    <li><a href="#" class="nav-link">HIOPOS Cloud</a></li>
-                    <li><a href="#" class="nav-link">Infrastructure</a></li>
-                    <li><a href="#" class="nav-link">Support</a></li>
-                    <li style="margin-left: 20px;"><a href="tel:0129402940" class="btn-premium" style="padding: 12px 30px; font-size: 0.8rem;">Call 012 940 2940</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Solutions <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">HIOPOS Cloud POS</a></li>
+                            <li><a href="#">IQ Retail ERP</a></li>
+                            <li><a href="#">Palladium Accounting</a></li>
+                            <li><a href="#">Virtual Server Hosting</a></li>
+                            <li><a href="#">VOIP Cloud PABX</a></li>
+                            <li><a href="#">Network Security</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="tel:0129402940" class="btn-gold" style="margin-top:8px; margin-left:15px;">012 940 2940</a></li>
                 </ul>
             </div>
         </div>
@@ -170,63 +98,81 @@
     <section class="hero-premium">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <span class="floating-badge">ESTABLISHED 1999</span>
-                    <h1 class="hero-title animate__animated animate__fadeInUp">Next-Gen IT<br>For Global Brands.</h1>
-                    <p class="lead mt-4" style="font-size: 1.4rem; color: #636e72;">Over 25 years of empowering South African retail and enterprise with mission-critical ICT infrastructure and HIOPOS cloud technology.</p>
-                    <div class="mt-5 animate__animated animate__fadeInUp animate__delay-1s">
-                        <button class="btn-premium">Explore Ecosystem</button>
-                        <a href="#" class="ml-4" style="color: var(--navy); font-weight: 800; text-decoration: none;">View Gold Partner Status →</a>
+                <div class="col-md-7">
+                    <h1 class="hero-title">Honesty, Integrity,<br><span style="color:var(--blue)">Technical Mastery.</span></h1>
+                    <div class="values-box">
+                        <p style="font-size: 1.2rem; line-height: 1.8;">Established in 1999 on Christian foundations, CEEIT Solutions provides more than just IT support. We provide a partnership built on trust, delivering global enterprise systems with a servant’s heart.</p>
                     </div>
+                    <button class="btn btn-primary btn-lg" style="border-radius:50px; padding:15px 40px; font-weight:800;">REQUEST A CONSULTATION</button>
                 </div>
-                <div class="col-lg-5">
-                    <img src="https://ceeit.co.za/wp-content/uploads/2024/08/25years-web-2.png" class="img-fluid animate__animated animate__zoomIn" alt="25 Years">
+                <div class="col-md-5">
+                    <img src="https://ceeit.co.za/wp-content/uploads/2024/08/25years-web-2.png" class="img-fluid" alt="25 Years Excellence">
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        <div class="partner-ribbon">
-            <div class="row text-center align-items-center">
-                <div class="col-md-2 col-xs-4"><strong style="color:#aaa">CERTIFIED IN:</strong></div>
-                <div class="col-md-2 col-xs-4"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" height="25" style="filter:grayscale(1); opacity:0.6"></div>
-                <div class="col-md-2 col-xs-4"><strong>IQ RETAIL</strong></div>
-                <div class="col-md-2 col-xs-4"><strong>PALLADIUM</strong></div>
-                <div class="col-md-2 col-xs-4"><strong>IRONTREE</strong></div>
-                <div class="col-md-2 col-xs-4"><strong>HIOPOS GOLD</strong></div>
-            </div>
-        </div>
-    </div>
-
-    <section style="padding: 150px 0;">
+    <section id="solutions" style="padding: 100px 0; background: #fff;">
         <div class="container">
-            <div class="row mb-5 text-center">
-                <div class="col-md-8 col-md-offset-2">
-                    <h2 style="font-size: 3.5rem; font-weight: 800; color: var(--navy);">One Partner.<br><span style="color:var(--blue)">Infinite Scale.</span></h2>
+            <div class="row text-center mb-5">
+                <div class="col-md-12">
+                    <h2 style="font-weight:800; font-size: 3rem;">Complete ICT <span style="color:var(--blue)">Ecosystem</span></h2>
+                    <p>End-to-end solutions for Retail, Hospitality, and Industrial sectors.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 mb-5">
-                    <div class="premium-card">
-                        <div class="icon-circle"><i class="fa fa-cloud-arrow-up"></i></div>
-                        <h3>HIOPOS Cloud</h3>
-                        <p>The global leader in hospitality and retail management. Multi-device, multi-country, 100% offline-capable cloud sync.</p>
-                        <a href="https://www.hiopos.com/es/" target="_blank" style="color:var(--hiopos-red); font-weight: 800;">DISCOVER HIOPOS →</a>
+                <div class="col-md-4">
+                    <h4 style="color:var(--navy); font-weight:800; border-bottom: 2px solid var(--gold); padding-bottom:10px;">ERP & Accounting</h4>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> IQ Retail Enterprise Implementation</div>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> Palladium Business Excellence</div>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> POS System Maintenance</div>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> Warehouse Inventory Control</div>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color:var(--navy); font-weight:800; border-bottom: 2px solid var(--gold); padding-bottom:10px;">Cloud & Infrastructure</h4>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> Virtual Windows Server Hosting</div>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> Off-site IronTree Cloud Backups</div>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> Microsoft 365 Management</div>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> Advanced Network Security</div>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color:var(--navy); font-weight:800; border-bottom: 2px solid var(--gold); padding-bottom:10px;">Industrial Tech</h4>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> Barcoding & Labeling Solutions</div>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> High-Speed Thermal Printers</div>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> VOIP & Cloud PABX Systems</div>
+                    <div class="service-list-item"><i class="fa fa-check-circle"></i> Enterprise Fibre & LTE-A</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="padding: 100px 0; background: var(--light-bg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="font-weight:800;">Skilled Professionals</h2>
+                    <p>Our team consists of certified engineers with over two decades of experience. We don't just fix computers; we engineer business continuity. Each technician is vetted not just for skill, but for <strong>ethical character</strong>.</p>
+                    <div class="row mt-4">
+                        <div class="col-xs-4 text-center">
+                            <h3 style="color:var(--blue); font-weight:800;">25+</h3>
+                            <p class="small">Years Experience</p>
+                        </div>
+                        <div class="col-xs-4 text-center">
+                            <h3 style="color:var(--blue); font-weight:800;">1k+</h3>
+                            <p class="small">Successful Installs</p>
+                        </div>
+                        <div class="col-xs-4 text-center">
+                            <h3 style="color:var(--blue); font-weight:800;">24/7</h3>
+                            <p class="small">Active Support</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-5">
-                    <div class="premium-card">
-                        <div class="icon-circle"><i class="fa fa-server"></i></div>
-                        <h3>Cloud Infrastructure</h3>
-                        <p>Virtual Windows Servers and dedicated hosting tailored for high-availability ERP and remote enterprise teams.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="premium-card">
-                        <div class="icon-circle"><i class="fa fa-network-wired"></i></div>
-                        <h3>VOIP & Connectivity</h3>
-                        <p>Enterprise Fibre, LTE-A, and Cloud PABX systems that reduce overheads while scaling your communication.</p>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <div class="project-overlay">
+                            <h4>Recent Project: National Retail Rollout</h4>
+                            <p class="small">Implemented a 50-store HIOPOS Cloud sync with centralized IQ Retail headquarters for a leading boutique chain.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -234,57 +180,65 @@
     </section>
 
     <div class="container">
-        <div class="hiopos-cinema">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2 style="font-size: 3.5rem; font-weight: 800;">The HIOPOS<br><span style="color:var(--hiopos-red)">Revolution.</span></h2>
-                    <p class="mt-4" style="font-size: 1.2rem; opacity: 0.8;">As a Gold Partner, CEEIT Solutions delivers the world's most intuitive cloud POS ecosystem. From Kitchen Displays to Mobile Ordering—master your business from anywhere.</p>
-                    <ul class="list-unstyled mt-4" style="font-weight: 600;">
-                        <li><i class="fa fa-check text-danger"></i> 100% Real-time Inventory</li>
-                        <li><i class="fa fa-check text-danger"></i> Multi-Currency & Global Compliance</li>
-                        <li><i class="fa fa-check text-danger"></i> Seamless ERP Integration</li>
-                    </ul>
-                    <button class="btn btn-danger btn-lg mt-4" style="border-radius:50px; padding: 15px 40px; font-weight:800;">REQUEST DEMO</button>
-                </div>
-                <div class="col-md-6 text-center">
-                    <i class="fa fa-tablet-screen-button" style="font-size: 20rem; color: rgba(255,255,255,0.05);"></i>
+        <section class="newsletter-section text-center">
+            <h2 style="font-weight:800;">Tech Insights for Your Business</h2>
+            <p style="opacity:0.8;">Subscribe to our quarterly newsletter for security updates and ERP efficiency tips.</p>
+            <div class="row mt-4">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter your email" style="border-radius:50px 0 0 50px; padding:25px;">
+                        <span class="input-group-btn">
+                            <button class="btn btn-gold" type="button" style="border-radius:0 50px 50px 0; padding:14px 30px;">SUBSCRIBE</button>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 
-    <footer style="background: var(--navy); color: white; padding: 120px 0 60px;">
+    <footer style="background: var(--navy); color: white; padding: 100px 0 40px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="https://ceeit.co.za/wp-content/uploads/2025/10/Ceeit-RS-Transparent-2025.png" height="60" style="filter: brightness(0) invert(1);">
-                    <p class="mt-4" style="opacity: 0.5;">"We are your IT guy, except you don't have to buy our lunch." - Delivering excellence since 1999.</p>
+                    <img src="https://ceeit.co.za/wp-content/uploads/2025/10/Ceeit-RS-Transparent-2025.png" style="height:40px; filter: brightness(0) invert(1);">
+                    <p class="mt-4" style="opacity: 0.6; line-height: 2;">We believe in the Biblical principle of stewardship. We manage your technology with the same care and ethics we apply to our own lives and families.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/27622037170" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-4 col-md-offset-1">
+                <div class="col-md-3 col-md-offset-1">
                     <h4>Pretoria HQ</h4>
                     <p style="opacity: 0.7;">
                         Office 102, 378 Braam Pretorius St<br>
-                        Magalieskruin, Pretoria, 0182<br><br>
-                        <strong>Phone:</strong> 012 940 2940<br>
-                        <strong>WhatsApp:</strong> 062 203 7170
+                        Magalieskruin, Pretoria<br>
+                        <strong>T: 012 940 2940</strong><br>
+                        <strong>W: 062 203 7170</strong>
                     </p>
                 </div>
-                <div class="col-md-3">
-                    <h4>Expertise</h4>
-                    <ul class="list-unstyled" style="opacity: 0.7; line-height: 2.5;">
-                        <li>IQ Retail ERP Systems</li>
-                        <li>Palladium Accounting</li>
-                        <li>Microsoft Cloud Solutions</li>
-                        <li>Cyber Security Audits</li>
+                <div class="col-md-4">
+                    <h4>Our Services</h4>
+                    <ul class="list-unstyled" style="opacity: 0.7; columns: 2;">
+                        <li>ERP Systems</li>
+                        <li>Cloud POS</li>
+                        <li>VOIP</li>
+                        <li>Fibre</li>
+                        <li>Virtual Servers</li>
+                        <li>Scanning</li>
+                        <li>Labeling</li>
+                        <li>Backups</li>
                     </ul>
                 </div>
             </div>
-            <hr style="margin: 60px 0; border-color: rgba(255,255,255,0.1);">
-            <div class="text-center small" style="opacity: 0.4;">
-                &copy; 2026 CEEIT Solutions. All Rights Reserved. Designed for Enterprise Performance.
+            <hr style="margin-top:60px; opacity:0.1;">
+            <div class="text-center small" style="opacity:0.4;">
+                &copy; 2026 CEEIT Solutions | Pro Veritate et Technologia
             </div>
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
