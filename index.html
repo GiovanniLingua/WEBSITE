@@ -1,259 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FBC Chemicals (Pty) Ltd - Thabazimbi</title>
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drillko Pty Ltd | Borehole Drilling Pretoria</title>
+
+<style>
     body {
-      font-family: system-ui, -apple-system, sans-serif;
-      line-height: 1.6;
-      color: #2d2d2d;
-      background: #f9faf7;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
     }
+
+    header {
+        background: #0b3d2e;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
     nav {
-      position: fixed;
-      top: 0; width: 100%;
-      background: #1e3a2f; /* deep green for agriculture/chemical trust */
-      color: white;
-      padding: 1rem 5%;
-      z-index: 1000;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        background: #072a1f;
+        padding: 10px;
+        text-align: center;
     }
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-    }
-    .nav-links {
-      display: flex;
-      gap: 2.8rem;
-    }
-    .nav-links a {
-      color: #e8ece5;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    .nav-links a:hover { color: white; }
 
-    section { padding: 9rem 5% 7rem; max-width: 1200px; margin: 0 auto; }
-    h1, h2 { color: #1e3a2f; text-align: center; }
-    #home {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #2e5d47 0%, #3f7a5f 100%);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 5%;
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
     }
-    .hero-content {
-      max-width: 950px;
+
+    .hero {
+        background: url('https://images.unsplash.com/photo-1581090700227-4c4f50c2b9b3') no-repeat center/cover;
+        color: white;
+        text-align: center;
+        padding: 100px 20px;
     }
-    .hero-content h1 {
-      font-size: 4rem;
-      margin-bottom: 1.6rem;
+
+    .hero h2 {
+        font-size: 40px;
     }
-    .hero-content p {
-      font-size: 1.4rem;
-      margin-bottom: 2.8rem;
-      opacity: 0.95;
-    }
+
     .btn {
-      display: inline-block;
-      background: white;
-      color: #1e3a2f;
-      padding: 1.1rem 2.6rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-    .btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        background: #00a86b;
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 15px;
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4.5rem;
-      align-items: center;
-    }
-    ul.check-list {
-      list-style: none;
-      font-size: 1.2rem;
-    }
-    ul.check-list li {
-      margin-bottom: 1.3rem;
-      position: relative;
-      padding-left: 2.4rem;
-    }
-    ul.check-list li:before {
-      content: "✔";
-      color: #4a8c6e;
-      position: absolute;
-      left: 0;
-      font-weight: bold;
+    section {
+        padding: 50px 20px;
+        max-width: 1100px;
+        margin: auto;
     }
 
-    #catalogue { background: #f1f5f1; }
-    .catalogue-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.8rem;
-      margin-top: 3.5rem;
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
-    .card {
-      background: white;
-      padding: 2.2rem;
-      border-radius: 14px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.09);
-      text-align: center;
-    }
-    .card h3 { margin-bottom: 1.3rem; color: #1e3a2f; font-size: 1.45rem; }
 
-    #contact { background: #e9efe9; }
-    form {
-      display: grid;
-      gap: 1.5rem;
-      max-width: 580px;
-      margin: 0 auto;
-    }
-    input, textarea {
-      padding: 1.1rem;
-      border: 1px solid #a8c0a8;
-      border-radius: 9px;
-      font-size: 1rem;
-    }
-    button.btn {
-      background: #1e3a2f;
-      color: white;
-      border: none;
-      cursor: pointer;
+    .service-box {
+        flex: 1;
+        min-width: 250px;
+        background: #f4f4f4;
+        padding: 20px;
+        border-radius: 8px;
     }
 
     footer {
-      background: #1e3a2f;
-      color: #e8ece5;
-      text-align: center;
-      padding: 2.5rem;
-      font-size: 0.98rem;
+        background: #0b3d2e;
+        color: white;
+        text-align: center;
+        padding: 20px;
     }
 
-    @media (max-width: 768px) {
-      .grid-2 { grid-template-columns: 1fr; }
-      .nav-links { gap: 1.6rem; font-size: 0.98rem; flex-wrap: wrap; justify-content: center; }
-      .hero-content h1 { font-size: 3rem; }
+    .contact p {
+        margin: 5px 0;
     }
-  </style>
+
+    @media(max-width: 768px){
+        .hero h2 {
+            font-size: 28px;
+        }
+    }
+</style>
+
 </head>
 <body>
 
-  <nav>
-    <div class="nav-container">
-      <a href="#home" class="logo">FBC Chemicals</a>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#catalogue">Our Catalogue</a>
-        <a href="#contact">Contact Us</a>
-      </div>
-    </div>
-  </nav>
+<header>
+    <h1>Drillko Pty Ltd</h1>
+    <p>Trusted Borehole & Water Drilling Experts in Pretoria</p>
+</header>
 
-  <section id="home">
-    <div class="hero-content">
-      <h1>FBC Chemicals (Pty) Ltd</h1>
-      <p>Thabazimbi-based specialist supplier of chemical products for bush encroachment control, pasture reclamation, weed & pest management, fence line treatment, and more. Expert advice for farmers and game ranchers in Limpopo.</p>
-      <a href="#contact" class="btn">Contact Ian Chambers Today</a>
-    </div>
-  </section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-  <section id="about">
+<section class="hero">
+    <h2>Reliable Water Solutions You Can Trust</h2>
+    <p>Professional Borehole Drilling & Water Services</p>
+    <a href="tel:0836534026" class="btn">Call Now</a>
+</section>
+
+<section id="about">
     <h2>About Us</h2>
-    <div class="grid-2">
-      <div>
-        <p>FBC Chemicals (Pty) Ltd (Reg. K2017471935) is a well-established business in Thabazimbi, Limpopo, providing wholesale and retail chemical solutions to the agricultural, wildlife, and related sectors.</p>
-        <p>We specialise in effective chemical products and knowledgeable advice for chemiese ontbossing (bush clearing), plaagbeheer (pest control), lyndraad produkte (fence line maintenance), and pasture improvement.</p>
-      </div>
-      <div>
-        <ul class="check-list">
-          <li>Chemical bush encroachment control & pasture reclamation</li>
-          <li>Weed killers and herbicides</li>
-          <li>Pesticides and pest control solutions</li>
-          <li>Fence line & boundary treatment products</li>
-          <li>Expert guidance for wildsboer (game farmers) and agriculture</li>
-          <li>Competitive wholesale & retail supply</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="catalogue">
-    <h2>Our Catalogue</h2>
-    <p style="text-align:center; max-width:950px; margin:0 auto 3.5rem; font-size:1.25rem;">
-      We offer proven chemical solutions tailored for land management, farming, and game ranching. Reach out for product details, quotes, application advice, or safety data.
+    <p>
+        Welcome to Drillko, your premier destination for all your water drilling needs. 
+        As a trusted and experienced provider of water drilling solutions, we are committed 
+        to delivering exceptional services and top-quality results.
     </p>
-    <div class="catalogue-list">
-      <div class="card">
-        <h3>Bush Encroachment Control</h3>
-        <p>Specialised chemicals for effective ontbossing and reclaiming pastures from invasive brush and encroachment.</p>
-      </div>
-      <div class="card">
-        <h3>Weed Killers & Herbicides</h3>
-        <p>Targeted products to manage unwanted weeds, invasive plants, and maintain productive land.</p>
-      </div>
-      <div class="card">
-        <h3>Pest Control Products</h3>
-        <p>Reliable pesticides and treatments for agricultural and rural pest challenges.</p>
-      </div>
-      <div class="card">
-        <h3>Fence Line & Boundary Products</h3>
-        <p>Long-lasting lyndraad solutions to keep fences, boundaries, and perimeters clear.</p>
-      </div>
-    </div>
-  </section>
+    <p>
+        Whether you're a homeowner, farmer, or business owner, we understand the importance 
+        of a reliable and sustainable water source. Our expert team uses advanced equipment 
+        to ensure consistent and efficient results at affordable prices.
+    </p>
+</section>
 
-  <section id="contact">
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>Site Surveying</h3>
+            <p>Professional analysis to determine the best drilling location.</p>
+        </div>
+        <div class="service-box">
+            <h3>Borehole Drilling</h3>
+            <p>Efficient and reliable drilling for residential, agricultural, and commercial use.</p>
+        </div>
+        <div class="service-box">
+            <h3>Borehole Cleaning</h3>
+            <p>Restore and maintain optimal water flow and system performance.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <div class="grid-2">
-      <div>
-        <p style="font-size:1.3rem; margin-bottom:2rem;">
-          For expert advice, product enquiries, quotes, or on-site support — get in touch today.
-        </p>
-        <p><strong>Contact Person:</strong> Ian Chambers</p>
-        <p><strong>Phone:</strong> +27 82 923 6035</p>
-        <p><strong>Email:</strong> ianchambers@finbek.co.za</p>
-        <p><strong>Location:</strong> Warmbad Road, Thabazimbi, Limpopo, South Africa</p>
-        <p><strong>Company:</strong> FBC Chemicals (Pty) Ltd</p>
-      </div>
-      <div>
-        <form style="max-width:520px; margin:0 auto;">
-          <input type="text" placeholder="Your Name" required>
-          <input type="tel" placeholder="Your Phone" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea placeholder="Your Message (e.g. bush control enquiry, product quote, advice needed...)" rows="6" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
+    <p><strong>Phone:</strong> 083 653 4026</p>
+    <p><strong>Address:</strong> Bougainvilea Estate, 94 Firethorn St, Montana, Pretoria</p>
+    <p><strong>Service Area:</strong> Pretoria & Surrounding Areas</p>
+    <a href="tel:0836534026" class="btn">Call Now</a>
+</section>
 
-  <footer>
-    <p>© FBC Chemicals (Pty) Ltd | Thabazimbi, Limpopo | Chemical Solutions for Agriculture & Game Farming</p>
-  </footer>
+<footer>
+    <p>© 2026 Drillko Pty Ltd | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
