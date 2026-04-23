@@ -9,23 +9,18 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        line-height: 1.6;
         color: #333;
     }
 
     header {
-        background: #0b3d2e;
+        background: #0a3d62;
         color: white;
-        padding: 20px;
         text-align: center;
-    }
-
-    header h1 {
-        margin: 0;
+        padding: 20px;
     }
 
     nav {
-        background: #072a1f;
+        background: #074a7a;
         padding: 10px;
         text-align: center;
     }
@@ -38,18 +33,18 @@
     }
 
     .hero {
-        background: url('https://images.unsplash.com/photo-1581090700227-4c4f50c2b9b3') no-repeat center/cover;
+        background: url('https://images.unsplash.com/photo-1598514982846-7c6bb3c7c8d7') no-repeat center/cover;
         color: white;
         text-align: center;
-        padding: 100px 20px;
+        padding: 120px 20px;
     }
 
     .hero h2 {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .btn {
-        background: #00a86b;
+        background: #1e90ff;
         color: white;
         padding: 12px 25px;
         text-decoration: none;
@@ -73,23 +68,60 @@
     .service-box {
         flex: 1;
         min-width: 250px;
-        background: #f4f4f4;
+        background: #f4f9ff;
         padding: 20px;
         border-radius: 8px;
     }
 
-    footer {
-        background: #0b3d2e;
-        color: white;
-        text-align: center;
-        padding: 20px;
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 32%;
+        border-radius: 8px;
     }
 
     .contact p {
         margin: 5px 0;
     }
 
+    iframe {
+        width: 100%;
+        height: 350px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    footer {
+        background: #0a3d62;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        color: white;
+        font-size: 24px;
+        padding: 15px;
+        border-radius: 50%;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
     @media(max-width: 768px){
+        .gallery img {
+            max-width: 100%;
+        }
         .hero h2 {
             font-size: 28px;
         }
@@ -101,32 +133,31 @@
 
 <header>
     <h1>Drillko Pty Ltd</h1>
-    <p>Trusted Borehole & Water Drilling Experts in Pretoria</p>
+    <p>Borehole Drilling Experts in Pretoria</p>
 </header>
 
 <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero">
-    <h2>Reliable Water Solutions You Can Trust</h2>
-    <p>Professional Borehole Drilling & Water Services</p>
+    <h2>Professional Borehole Drilling Solutions</h2>
+    <p>Reliable Water Supply for Homes, Farms & Businesses</p>
     <a href="tel:0836534026" class="btn">Call Now</a>
 </section>
 
 <section id="about">
     <h2>About Us</h2>
     <p>
-        Welcome to Drillko, your premier destination for all your water drilling needs. 
-        As a trusted and experienced provider of water drilling solutions, we are committed 
-        to delivering exceptional services and top-quality results.
+        Welcome to Drillko, your trusted provider of water drilling solutions in Pretoria. 
+        We deliver high-quality borehole drilling, site surveys, and cleaning services.
     </p>
     <p>
-        Whether you're a homeowner, farmer, or business owner, we understand the importance 
-        of a reliable and sustainable water source. Our expert team uses advanced equipment 
-        to ensure consistent and efficient results at affordable prices.
+        With expert teams and modern equipment, we ensure reliable and sustainable water 
+        solutions tailored to your needs at affordable prices.
     </p>
 </section>
 
@@ -135,16 +166,25 @@
     <div class="services">
         <div class="service-box">
             <h3>Site Surveying</h3>
-            <p>Professional analysis to determine the best drilling location.</p>
+            <p>Accurate location analysis before drilling.</p>
         </div>
         <div class="service-box">
             <h3>Borehole Drilling</h3>
-            <p>Efficient and reliable drilling for residential, agricultural, and commercial use.</p>
+            <p>Professional drilling for residential & commercial use.</p>
         </div>
         <div class="service-box">
             <h3>Borehole Cleaning</h3>
-            <p>Restore and maintain optimal water flow and system performance.</p>
+            <p>Improve water flow and extend borehole lifespan.</p>
         </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Our Work</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+        <img src="https://images.unsplash.com/photo-1581091870627-3b5c4c27d4c7">
+        <img src="https://images.unsplash.com/photo-1598515213693-6c1b52f4fb3b">
     </div>
 </section>
 
@@ -153,12 +193,21 @@
     <p><strong>Phone:</strong> 083 653 4026</p>
     <p><strong>Address:</strong> Bougainvilea Estate, 94 Firethorn St, Montana, Pretoria</p>
     <p><strong>Service Area:</strong> Pretoria & Surrounding Areas</p>
+
     <a href="tel:0836534026" class="btn">Call Now</a>
+
+    <!-- Google Maps Embed -->
+    <iframe 
+        src="https://www.google.com/maps?q=94+Firethorn+St+Montana+Pretoria&output=embed">
+    </iframe>
 </section>
 
 <footer>
     <p>© 2026 Drillko Pty Ltd | All Rights Reserved</p>
 </footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/27836534026" class="whatsapp" target="_blank">💬</a>
 
 </body>
 </html>
