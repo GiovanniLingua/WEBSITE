@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         :root {
-            --primary: #1e3a8a;
-            --accent: #d97706;
-            --dark: #0f172a;
+            --primary: #1e40af;     /* Deep Blue */
+            --accent: #10b981;      /* Fresh Green */
+            --dark: #111827;
             --light: #f8fafc;
         }
         * { margin:0; padding:0; box-sizing:border-box; }
@@ -20,15 +20,13 @@
             color: #1e293b;
             line-height: 1.7;
         }
-        /* Parallax Hero */
+        /* Hero with Parallax */
         header {
-            background: linear-gradient(rgba(30,58,138,0.75), rgba(30,58,138,0.75)),
-                        url('https://images.unsplash.com/photo-1503387762-592deb58caa5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat fixed;
+            background: linear-gradient(rgba(30,64,175,0.8), rgba(30,64,175,0.85)),
+                        url('hero-banner.jpg') center/cover no-repeat fixed;
             color: white;
             text-align: center;
             padding: 180px 20px 120px;
-            position: relative;
-            background-attachment: fixed; /* Parallax effect */
         }
         .logo {
             width: 200px;
@@ -115,10 +113,7 @@
             width: 100%;
             transition: opacity 1.2s ease-in-out;
         }
-        .slideshow-slide.active {
-            display: block;
-            opacity: 1;
-        }
+        .slideshow-slide.active { display: block; opacity: 1; }
         .slideshow-slide img {
             width: 100%;
             height: 520px;
@@ -187,14 +182,14 @@
             right: 40px;
             width: 85px;
             height: 85px;
-            background: #25D366;
+            background: #10b981;
             color: white;
             border-radius: 50%;
             font-size: 3.2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 16px 40px rgba(37,213,102,0.45);
+            box-shadow: 0 16px 40px rgba(16,185,129,0.45);
             z-index: 9999;
         }
         .whatsapp-float:hover { transform: scale(1.18); }
@@ -216,7 +211,7 @@
 <body>
 
 <header>
-    <img src="placeholder-logo.png" alt="DNA09 Trading Logo" class="logo">
+    <img src="logo.png" alt="DNA09 Trading Logo" class="logo">
     <h1>DNA09 Trading</h1>
     <p class="tagline">Build with Confidence • Build with DNA Trading</p>
     <p class="address-info">
@@ -253,21 +248,21 @@
 <section id="store">
     <h2>Our Store</h2>
     <div class="slideshow-container" id="slideshow">
-        <div class="slideshow-slide active"><img src="slideshow-1.jpg" alt="Store Interior 1"></div>
-        <div class="slideshow-slide"><img src="slideshow-2.jpg" alt="Store Interior 2"></div>
-        <div class="slideshow-slide"><img src="slideshow-3.jpg" alt="Store Interior 3"></div>
-        <div class="slideshow-slide"><img src="slideshow-4.jpg" alt="Store Interior 4"></div>
-        <div class="slideshow-slide"><img src="slideshow-5.jpg" alt="Store Interior 5"></div>
-        <div class="slideshow-slide"><img src="slideshow-6.jpg" alt="Store Interior 6"></div>
-        <div class="slideshow-slide"><img src="slideshow-7.jpg" alt="Store Interior 7"></div>
-        <div class="slideshow-slide"><img src="slideshow-8.jpg" alt="Store Interior 8"></div>
-        <div class="slideshow-slide"><img src="slideshow-9.jpg" alt="Store Interior 9"></div>
-        <div class="slideshow-slide"><img src="slideshow-10.jpg" alt="Store Interior 10"></div>
+        <div class="slideshow-slide active"><img src="store-1.jpg" alt="Store Interior 1"></div>
+        <div class="slideshow-slide"><img src="store-2.jpg" alt="Store Interior 2"></div>
+        <div class="slideshow-slide"><img src="store-3.jpg" alt="Store Interior 3"></div>
+        <div class="slideshow-slide"><img src="store-4.jpg" alt="Store Interior 4"></div>
+        <div class="slideshow-slide"><img src="store-5.jpg" alt="Store Interior 5"></div>
+        <div class="slideshow-slide"><img src="store-6.jpg" alt="Store Interior 6"></div>
+        <div class="slideshow-slide"><img src="store-7.jpg" alt="Store Interior 7"></div>
+        <div class="slideshow-slide"><img src="store-8.jpg" alt="Store Interior 8"></div>
+        <div class="slideshow-slide"><img src="store-9.jpg" alt="Store Interior 9"></div>
+        <div class="slideshow-slide"><img src="store-10.jpg" alt="Store Interior 10"></div>
     </div>
 </section>
 
 <section id="products">
-    <img src="placeholder-construction-header.jpg" alt="Building Materials" class="section-header-img">
+    <img src="products-header.jpg" alt="Building Materials" class="section-header-img">
     <h2>Premium Products</h2>
     <div class="services-grid">
         <div class="service-card">
@@ -287,7 +282,7 @@
 </section>
 
 <section id="gas">
-    <img src="placeholder-gas.jpg" alt="Gas Refills" class="section-header-img">
+    <img src="gas-header.jpg" alt="Gas Refills" class="section-header-img">
     <h2>Gas Refills</h2>
     <div class="services-grid">
         <div class="service-card">
@@ -315,7 +310,7 @@
     </p>
 
     <a href="https://wa.me/27826180296?text=Hello%20DNA09%20Trading%2C%20I%27d%20like%20to%20get%20a%20quote..." 
-       class="cta-button" style="font-size:2.2rem; background:#25D366; padding:16px 45px; border-radius:50px; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:12px; margin:2rem 0;">
+       class="cta-button" style="font-size:2.2rem; background:#10b981; padding:16px 45px; border-radius:50px; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:12px; margin:2rem 0;">
         <i class="fab fa-whatsapp"></i> Get a Quote Today
     </a>
 
@@ -345,10 +340,9 @@
             }
         });
     }, { threshold: 0.15 });
-
     sections.forEach(section => observer.observe(section));
 
-    // Slideshow with smooth transition
+    // Slideshow
     let slideIndex = 0;
     const slides = document.querySelectorAll('.slideshow-slide');
     function showSlides() {
@@ -358,7 +352,7 @@
     }
     setInterval(showSlides, 5000);
 
-    // Smooth scroll with offset
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
