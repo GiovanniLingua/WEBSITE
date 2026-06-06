@@ -1,372 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNA09 Trading | Hardware & Construction Store | Witbank</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #1e40af;
-            --accent: #10b981;
-            --dark: #0f172a;
-            --light: #f8fafc;
-        }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background: var(--light);
-            color: #1e293b;
-            line-height: 1.7;
-        }
-        header {
-            background: linear-gradient(rgba(30,64,175,0.8), rgba(30,64,175,0.85)),
-                        url('hero-banner.jpg') center/cover no-repeat fixed;
-            color: white;
-            text-align: center;
-            padding: 180px 20px 120px;
-        }
-        .logo {
-            width: 200px;
-            background: white;
-            border-radius: 50%;
-            padding: 18px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            margin-bottom: 25px;
-        }
-        header h1 { font-size: 4rem; font-weight: 800; margin-bottom: 12px; }
-        .tagline { font-size: 1.8rem; margin-bottom: 20px; font-weight: 500; }
-        .address-info { font-size: 1.35rem; opacity: 0.95; }
+@media (max-width: 768px) {
 
-        nav {
-            background: var(--dark);
-            padding: 1.3rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
-            transition: 0.3s;
-        }
-        nav a:hover { color: var(--accent); }
-
-        section { 
-            padding: 100px 20px; 
-            max-width: 1300px; 
-            margin: 0 auto; 
-            opacity: 0; 
-            transform: translateY(40px); 
-            transition: all 1s ease-out; 
-        }
-        section.visible { opacity: 1; transform: translateY(0); }
-
-        h2 {
-            color: var(--primary);
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        h2::after {
-            content: '';
-            width: 130px;
-            height: 6px;
-            background: var(--accent);
-            display: block;
-            margin: 20px auto 0;
-            border-radius: 3px;
-        }
-        .section-header-img {
-            width: 100%;
-            max-height: 420px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin-bottom: 3rem;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-        }
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: 3rem auto;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-        }
-        .slideshow-slide {
-            display: none;
-            width: 100%;
-            transition: opacity 1.2s ease-in-out;
-        }
-        .slideshow-slide.active { display: block; opacity: 1; }
-        .slideshow-slide img {
-            width: 100%;
-            height: 520px;
-            object-fit: cover;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-            gap: 3rem;
-        }
-        .service-card {
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-            transition: all 0.4s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-20px);
-            box-shadow: 0 40px 80px rgba(0,0,0,0.22);
-        }
-        .card-content { padding: 3rem; }
-        .card-content h3 { color: var(--primary); font-size: 2.3rem; margin-bottom: 1.8rem; }
-
-        ul { list-style: none; }
-        ul li {
-            margin: 16px 0;
-            padding-left: 38px;
-            position: relative;
-            font-size: 1.2rem;
-        }
-        ul li::before {
-            content: '\f058';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: var(--accent);
-            position: absolute;
-            left: 0;
-            top: 4px;
-        }
-        .contact-section {
-            background: linear-gradient(135deg, var(--primary), var(--dark));
-            color: white;
-            text-align: center;
-            padding: 130px 20px;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 3.5rem;
-            margin: 3.5rem 0;
-        }
-        .social-icon {
-            color: white;
-            font-size: 3.8rem;
-            transition: all 0.4s;
-        }
-        .social-icon:hover {
-            color: var(--accent);
-            transform: scale(1.3) rotate(10deg);
-        }
-        .whatsapp-float {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            width: 85px;
-            height: 85px;
-            background: #10b981;
-            color: white;
-            border-radius: 50%;
-            font-size: 3.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 16px 40px rgba(16,185,129,0.45);
-            z-index: 9999;
-        }
-        .whatsapp-float:hover { transform: scale(1.18); }
-        footer {
-            background: var(--dark);
-            color: #94a3b8;
-            text-align: center;
-            padding: 4rem 1rem;
-        }
-        .footer-credit { margin-top: 1.5rem; opacity: 0.8; }
-        @media (max-width: 768px) {
-            header { padding: 120px 15px 60px; }
-            header h1 { font-size: 2.9rem; }
-            nav ul { flex-direction: column; gap: 1.5rem; }
-            .slideshow-slide img { height: 340px; }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <img src="logo.png" alt="DNA09 Trading Logo" class="logo">
-    <h1>DNA09 Trading</h1>
-    <p class="tagline">Build with Confidence • Build with DNA Trading</p>
-    <p class="address-info">
-        Shop 7A, Del Judor Centre • C/O Steenkamp & Entie Street • Witbank, Mpumalanga
-    </p>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#store">Our Store</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#gas">Gas Refills</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<section id="home">
-    <h2>Welcome to DNA09 Trading</h2>
-    <p style="max-width:900px; margin:0 auto 3rem; font-size:1.35rem; text-align:center;">
-        Your trusted hardware and construction store in Witbank. Quality materials, expert advice, and exceptional service.
-    </p>
-</section>
-
-<section id="about">
-    <h2>About Us</h2>
-    <p style="max-width:920px; margin:0 auto 3rem; font-size:1.25rem; text-align:center;">
-        DNA09 Trading (Pty) Ltd is a leading hardware and construction consulting store in Del Judor, Witbank.
-    </p>
-</section>
-
-<section id="store">
-    <h2>Our Store</h2>
-    <div class="slideshow-container" id="slideshow">
-        <div class="slideshow-slide active"><img src="store-1.jpg" alt="Store 1"></div>
-        <div class="slideshow-slide"><img src="store-2.jpg" alt="Store 2"></div>
-        <div class="slideshow-slide"><img src="store-3.jpg" alt="Store 3"></div>
-        <div class="slideshow-slide"><img src="store-4.jpg" alt="Store 4"></div>
-        <div class="slideshow-slide"><img src="store-5.jpg" alt="Store 5"></div>
-        <div class="slideshow-slide"><img src="store-6.jpg" alt="Store 6"></div>
-        <div class="slideshow-slide"><img src="store-7.jpg" alt="Store 7"></div>
-        <div class="slideshow-slide"><img src="store-8.jpg" alt="Store 8"></div>
-        <div class="slideshow-slide"><img src="store-9.jpg" alt="Store 9"></div>
-        <div class="slideshow-slide"><img src="store-10.jpg" alt="Store 10"></div>
-    </div>
-</section>
-
-<section id="products">
-    <img src="products-header.jpg" alt="Building Materials" class="section-header-img">
-    <h2>Premium Products</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="card-content">
-                <h3>What We Supply</h3>
-                <ul>
-                    <li>Cement & Sand</li>
-                    <li>Bricks & Blocks</li>
-                    <li>Quality Paint (Dulux, Plascon & more)</li>
-                    <li>DIY Supplies & Tools</li>
-                    <li>Hardware & Plumbing</li>
-                    <li>Roofing Materials</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="gas">
-    <img src="gas-header.jpg" alt="Gas Refills" class="section-header-img">
-    <h2>Gas Refills</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="card-content">
-                <h3>Fast & Safe Gas Service</h3>
-                <ul>
-                    <li>Professional cylinder refills</li>
-                    <li>All popular sizes available</li>
-                    <li>Safe and reliable service</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="contact-section">
-    <h2>Visit Our Store</h2>
-    <p style="font-size:1.4rem; margin:1.5rem 0;">
-        Shop 7A, Del Judor Centre<br>
-        C/O Steenkamp & Entie Street, Witbank
-    </p>
-    <p style="font-size:1.4rem; margin:1.5rem 0;">
-        Weekdays: 07:30 – 17:00<br>
-        Saturdays: 08:00 – 12:00
-    </p>
-
-    <a href="https://wa.me/27826180296?text=Hello%20DNA09%20Trading%2C%20I%27d%20like%20to%20get%20a%20quote..." 
-       class="cta-button" style="font-size:2.2rem; background:#10b981; padding:16px 45px; border-radius:50px; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:12px; margin:2rem 0;">
-        <i class="fab fa-whatsapp"></i> Get a Quote Today
-    </a>
-
-    <div class="social-icons">
-        <a href="https://www.facebook.com/share/16vh62J7Wd/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://wa.me/27826180296" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:info@dna09.co.za" class="social-icon"><i class="fas fa-envelope"></i></a>
-    </div>
-
-    <!-- Correct Google Maps -->
-    <div style="margin-top: 4rem;">
-        <h3 style="color:white; margin-bottom:1rem;">Find Us On The Map</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.5!2d29.215!3d-25.87!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDUyJzM1LjYiUyAyOcKwMDcnMjQuNiJF!5e0!3m2!1sen!2sza!4v1740000000000" 
-                width="100%" height="450" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-</section>
-
-<a href="https://wa.me/27826180296?text=Hello%20DNA09%20Trading..." target="_blank" class="whatsapp-float">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-<footer>
-    <p>© 2026 DNA09 Trading (Pty) Ltd | All Rights Reserved</p>
-    <p class="footer-credit">This page was built by <strong>NEXUS IT 2026</strong></p>
-</footer>
-
-<script>
-    // Scroll Animations
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.15 });
-    sections.forEach(section => observer.observe(section));
-
-    // Slideshow
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slideshow-slide');
-    function showSlides() {
-        slides.forEach(slide => slide.classList.remove('active'));
-        slideIndex = (slideIndex + 1) % slides.length;
-        slides[slideIndex].classList.add('active');
+    /* Header */
+    header {
+        padding: 90px 15px 50px;
+        background-attachment: scroll;
     }
-    setInterval(showSlides, 5000);
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const y = target.getBoundingClientRect().top + window.pageYOffset - 80;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-            }
-        });
-    });
-</script>
+    .logo {
+        width: 130px;
+        padding: 12px;
+    }
 
-</body>
-</html>
+    header h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .address-info {
+        font-size: 0.9rem;
+    }
+
+    /* Navigation */
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    /* Sections */
+    section {
+        padding: 60px 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    h2::after {
+        width: 80px;
+        height: 4px;
+    }
+
+    /* Text */
+    p {
+        font-size: 1rem !important;
+    }
+
+    /* Slideshow */
+    .slideshow-slide img {
+        height: 240px;
+    }
+
+    /* Service Cards */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card-content {
+        padding: 1.5rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.5rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+        padding-left: 30px;
+    }
+
+    /* Section Images */
+    .section-header-img {
+        max-height: 220px;
+        margin-bottom: 2rem;
+    }
+
+    /* Contact Button */
+    .cta-button {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        font-size: 1.1rem !important;
+        padding: 14px 20px !important;
+    }
+
+    /* Social Icons */
+    .social-icons {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        font-size: 2rem;
+    }
+
+    /* Map */
+    iframe {
+        height: 280px !important;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        right: 15px;
+        bottom: 15px;
+    }
+}
